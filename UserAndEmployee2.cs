@@ -27,7 +27,7 @@ namespace CMPT_291_Project
             dropDown.Items.Add("Show All");
             dropDown.Items.Add("Show with SSN: ");
 
-            String connectionString = "Server = DESKTOP-1JJOH8H; Database = MovieRental; Trusted_Connection = yes;";
+            String connectionString = "Server = PLEASEDONTHACKM; Database = MovieRental; Trusted_Connection = yes;";
 
 
             /* Starting the connection */
@@ -52,7 +52,7 @@ namespace CMPT_291_Project
                 this.Close();
             }
         }
-    
+
 
         // LIST OF USERS - USED FOR TESTING W/O DATABASE IMPLEMENTED YET
         #region
@@ -93,10 +93,6 @@ namespace CMPT_291_Project
             user4Emp.SubItems.Add("Fauht");
             user4Emp.SubItems.Add("114");
 
-            userListEmp1.Items.Add(user1Emp);
-            userListEmp1.Items.Add(user2Emp);
-            userListEmp1.Items.Add(user3Emp);
-            userListEmp1.Items.Add(user4Emp);
 
             /*
             foreach (User usr in userArray)
@@ -158,11 +154,7 @@ namespace CMPT_291_Project
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            userListEmp1.Visible = true;
-            userListLabel1.Visible = true;
-            employeeSearchBar1.Visible = true;
-            empAcctNoSearch1.Visible = true;
-            empNameSearch1.Visible = true;
+
             addUserEmp1.Visible = true;
             selectUserEmp.Visible = true;
 
@@ -203,7 +195,7 @@ namespace CMPT_291_Project
             var newUser = new User(getFirst.Text, getLast.Text, Int16.Parse(getAcctNo.Text), Int16.Parse(getPlan.Text), getDate.Value, getEmail.Text, getAddress.Text, getCity.Text, getState.Text, getZip.Text, Int64.Parse(getPhone.Text), Int64.Parse(getCred.Text));
             userArray.Add(newUser);
 
-            
+
             //Console.WriteLine(newUser);
             getFirst.Text = "";
             getLast.Text = "";
@@ -218,11 +210,7 @@ namespace CMPT_291_Project
             getPhone.Text = "";
             getCred.Text = "";
 
-            userListEmp1.Visible = true;
-            userListLabel1.Visible = true;
-            employeeSearchBar1.Visible = true;
-            empAcctNoSearch1.Visible = true;
-            empNameSearch1.Visible = true;
+
             addUserEmp1.Visible = true;
             selectUserEmp.Visible = true;
 
@@ -258,23 +246,23 @@ namespace CMPT_291_Project
 
         private void listView4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void addMovies_Click(object sender, EventArgs e)
         {
             // IF PLAN TYPE = 1 
-                // AND IF MOVIE QUEUE = 1
-                    // SHOW LABEL WITH "FULL QUEUE WARNING"
-                // ELSE
-                    // IF MONTHLY LIMIT < 2 
-                        // GO TO MOVIE SCREEN
-                    // ELSE, SHOW LABEL WITH "FULL QUEUE WARNING"
+            // AND IF MOVIE QUEUE = 1
+            // SHOW LABEL WITH "FULL QUEUE WARNING"
+            // ELSE
+            // IF MONTHLY LIMIT < 2 
+            // GO TO MOVIE SCREEN
+            // ELSE, SHOW LABEL WITH "FULL QUEUE WARNING"
 
             // IF PLAN TYPE IS 2-4 (COULD HAVE 3 MOVIES AT A TIME)
-                // AND IF MOVIE QUEUE = 3 (FULL)
-                    // SHOW LABEL WITH "FULL QUEUE WARNING"
-                // ELSE, GO TO MOVIE SCREEN
+            // AND IF MOVIE QUEUE = 3 (FULL)
+            // SHOW LABEL WITH "FULL QUEUE WARNING"
+            // ELSE, GO TO MOVIE SCREEN
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -301,14 +289,15 @@ namespace CMPT_291_Project
             userActivity.Visible = false;
             addMovies.Visible = false;
             returnMovies.Visible = false;
-            
+
 
         }
 
         private void selectUser_Click(object sender, EventArgs e)
         {
-        
-            if (userListUsr.SelectedItems.Count != 0) {
+
+            if (userListUsr.SelectedItems.Count != 0)
+            {
 
                 string firstName = userListUsr.SelectedItems[0].SubItems[0].Text;
                 string lastName = userListUsr.SelectedItems[0].SubItems[1].Text;
@@ -338,7 +327,7 @@ namespace CMPT_291_Project
                 backButton.Visible = true;
             }
             else { return; }
-            
+
         }
 
 
@@ -399,17 +388,15 @@ namespace CMPT_291_Project
 
         private void selectUserEmp_Click_1(object sender, EventArgs e)
         {
-
-            if (userListEmp1.SelectedItems.Count != 0) {
+            /*
+            if (userListEmp1.SelectedItems.Count != 0)
+            {
                 string firstNameEmp = userListEmp1.SelectedItems[0].SubItems[0].Text;
                 string lastNameEmp = userListEmp1.SelectedItems[0].SubItems[1].Text;
                 userNameEmp.Text = firstNameEmp + " " + lastNameEmp;
 
                 userListLabel1.Visible = false;
-                userListEmp1.Visible = false;
-                employeeSearchBar1.Visible = false;
-                empNameSearch1.Visible = false;
-                empAcctNoSearch1.Visible = false;
+  
                 addUserEmp1.Visible = false;
                 selectUserEmp.Visible = false;
                 userTypeEmp.Visible = false;
@@ -425,15 +412,18 @@ namespace CMPT_291_Project
                 userZipEmp.Visible = true;
                 userPhoneEmp.Visible = true;
                 userCredEmp.Visible = true;
-                empUserMovies.Visible = true;
+
                 userPicEmp.Visible = true;
                 userActivityEmp.Visible = true;
                 empBack.Visible = true;
             }
 
-            else { return;
+            else
+            {
+                return;
             }
-                
+            */
+
         }
 
         private void empBack_Click_1(object sender, EventArgs e)
@@ -441,10 +431,7 @@ namespace CMPT_291_Project
 
             userTypeEmp.Visible = true;
             userListLabel1.Visible = true;
-            userListEmp1.Visible = true;
-            employeeSearchBar1.Visible = true;
-            empNameSearch1.Visible = true;
-            empAcctNoSearch1.Visible = true;
+
             addUserEmp1.Visible = true;
             selectUserEmp.Visible = true;
             selectUserEmp.Visible = true;
@@ -461,7 +448,7 @@ namespace CMPT_291_Project
             userZipEmp.Visible = false;
             userPhoneEmp.Visible = false;
             userCredEmp.Visible = false;
-            empUserMovies.Visible = false;
+
             userPicEmp.Visible = false;
             userActivityEmp.Visible = false;
         }
@@ -469,11 +456,7 @@ namespace CMPT_291_Project
         private void addUserEmp1_Click(object sender, EventArgs e)
         {
             addUserEmp1.Visible = false;
-            userListEmp1.Visible = false;
-            userListLabel1.Visible = false;
-            employeeSearchBar1.Visible = false;
-            empAcctNoSearch1.Visible = false;
-            empNameSearch1.Visible = false;
+
             selectUserEmp.Visible = false;
             userPicEmp.Visible = false;
             userActivityEmp.Visible = false;
@@ -543,7 +526,7 @@ namespace CMPT_291_Project
             dropDown.Visible = false;
             value.Visible = false;
             search.Visible = false;
-            addEmpMessage.Visible = false;
+
             employeeListLabel.Visible = false;
             employees.Visible = false;
             selsectEmployee.Visible = false;
@@ -554,7 +537,7 @@ namespace CMPT_291_Project
 
         private void CancelAdd_Click(object sender, EventArgs e)
         {
-            addEmpMessage.Visible = false;
+
             EmpFirstName.Visible = false;
             EmpLastName.Visible = false;
             SIN.Visible = false;
@@ -596,7 +579,7 @@ namespace CMPT_291_Project
             try
             {
 
-                myCommand.CommandText = "insert into employees values (" + SINBox.Text + ",'" + EmpFirstNameBox.Text + "','"  + EmpLastNameBox.Text + 
+                myCommand.CommandText = "insert into employees values (" + SINBox.Text + ",'" + EmpFirstNameBox.Text + "','" + EmpLastNameBox.Text +
                     "','" + AddressBox.Text + "','" + CityBox.Text + "','" + StateBox.Text + "','" + ZipBox.Text + "'," + PhoneNoBox.Text +
                     ",'" + StartDateBox.Text + "'," + HourlyRateBox.Text + ")";
                 //MessageBox.Show(myCommand.CommandText);
@@ -612,19 +595,19 @@ namespace CMPT_291_Project
                 StateBox.Text = "";
                 ZipBox.Text = "";
 
-                addEmpMessage.ForeColor = Color.LimeGreen;
-                addEmpMessage.Text = "Employee Added";
-                addEmpMessage.Visible = true;
+                addEmpMsg.ForeColor = Color.LimeGreen;
+                addEmpMsg.Text = "Employee Added";
+                addEmpMsg.Visible = true;
 
                 myCommand.ExecuteNonQuery();
             }
             catch (Exception e2)
             {
 
-                addEmpMessage.Visible = true;
-                addEmpMessage.ForeColor = Color.Red;
-                addEmpMessage.Text = "Failed to Add";
-                
+                addEmpMsg.Visible = true;
+                addEmpMsg.ForeColor = Color.Red;
+                addEmpMsg.Text = "Failed to Add";
+
                 MessageBox.Show(e2.ToString(), "Error");
             }
         }
@@ -661,7 +644,7 @@ namespace CMPT_291_Project
             {
                 MessageBox.Show(e3.ToString(), "Error");
             }
-                 }
+        }
 
         private void selsectEmployee_Click(object sender, EventArgs e)
         {
@@ -697,38 +680,83 @@ namespace CMPT_291_Project
             ActorSearch searchActor = new ActorSearch();
             searchActor.Show();
         }
+
+
+        private void getPlan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void finish_Click_2(object sender, EventArgs e)
+        {
+            try
+            {
+
+                myCommand.CommandText = "insert into customers values (" + getAcctNo.Text + ",'" + getPlan.Text + "','" + getDate.Text +
+                    "','" + getFirst.Text + "','" + getLast.Text + "','" + getAddress.Text + "','" + getCity.Text + "'," + getState.Text +
+                    ",'" + getZip.Text + "','" + getPhone.Text + "'," + getCred.Text + ")";
+                //MessageBox.Show(myCommand.CommandText);
+
+                getAcctNo.Text = "";
+                getPlan.Text = "";
+                getDate.Text = "";
+                getFirst.Text = "";
+                getLast.Text = "";
+                getAddress.Text = "";
+                getCity.Text = "";
+                getState.Text = "";
+                getZip.Text = "";
+                getPhone.Text = "";
+                getCred.Text = "";
+
+                addEmpMsg.ForeColor = Color.LimeGreen;
+                addEmpMsg.Text = "Employee Added";
+                addEmpMsg.Visible = true;
+
+                myCommand.ExecuteNonQuery();
+            }
+            catch (Exception e2)
+            {
+
+                addEmpMsg.Visible = true;
+                addEmpMsg.ForeColor = Color.Red;
+                addEmpMsg.Text = "Failed to Add";
+
+                MessageBox.Show(e2.ToString(), "Error");
+            }
+        }
         /*
 private void selsectEmployee_Click(object sender, EventArgs e)
 {
 
-  myCommand.CommandText = "select * from student";
-  /*
-  if (employeeSearchBar.Text == "Show with starting grade: ")
-      myCommand.CommandText += " where grade >= " + SmallestGrade.Text;
+myCommand.CommandText = "select * from student";
+/*
+if (employeeSearchBar.Text == "Show with starting grade: ")
+myCommand.CommandText += " where grade >= " + SmallestGrade.Text;
 
 
-  try
-  {
-      MessageBox.Show(myCommand.CommandText);
-      myReader = myCommand.ExecuteReader();
+try
+{
+MessageBox.Show(myCommand.CommandText);
+myReader = myCommand.ExecuteReader();
 
-      EmployeeList.Rows.Clear();
-      while (myReader.Read())
-      {
-          EmployeeList.Rows.Add(myReader["ssn"].ToString(), myReader["first_name"].ToString(), myReader["last_name"].ToString(), myReader["phone_no"].ToString(), myReader["hourly_rate"].ToString());
-      }
+EmployeeList.Rows.Clear();
+while (myReader.Read())
+{
+EmployeeList.Rows.Add(myReader["ssn"].ToString(), myReader["first_name"].ToString(), myReader["last_name"].ToString(), myReader["phone_no"].ToString(), myReader["hourly_rate"].ToString());
+}
 
-      myReader.Close();
-  }
-  catch (Exception e3)
-  {
-      MessageBox.Show(e3.ToString(), "Error");
-  }
+myReader.Close();
+}
+catch (Exception e3)
+{
+MessageBox.Show(e3.ToString(), "Error");
+}
 
 }*/
     }
 
-    }
+}
 
 
 

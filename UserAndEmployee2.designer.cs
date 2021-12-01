@@ -38,7 +38,6 @@ namespace CMPT_291_Project
             this.ManageUser = new System.Windows.Forms.TabPage();
             this.userListLabel1 = new System.Windows.Forms.Label();
             this.userTypeEmp = new System.Windows.Forms.Button();
-            this.employeeSearchBar1 = new System.Windows.Forms.TextBox();
             this.getCred = new System.Windows.Forms.TextBox();
             this.getPlan = new System.Windows.Forms.TextBox();
             this.getEmail = new System.Windows.Forms.TextBox();
@@ -50,7 +49,6 @@ namespace CMPT_291_Project
             this.getAcctNo = new System.Windows.Forms.TextBox();
             this.getLast = new System.Windows.Forms.TextBox();
             this.getFirst = new System.Windows.Forms.TextBox();
-            this.empNameSearch1 = new System.Windows.Forms.Button();
             this.getDate = new System.Windows.Forms.DateTimePicker();
             this.finish = new System.Windows.Forms.Button();
             this.setFirst = new System.Windows.Forms.Label();
@@ -76,18 +74,21 @@ namespace CMPT_291_Project
             this.userPlanEmp = new System.Windows.Forms.Label();
             this.userAcctNoEmp = new System.Windows.Forms.Label();
             this.userNameEmp = new System.Windows.Forms.Label();
-            this.empAcctNoSearch1 = new System.Windows.Forms.Button();
             this.addUserEmp1 = new System.Windows.Forms.Button();
             this.userActivityEmp = new System.Windows.Forms.ProgressBar();
             this.userPicEmp = new System.Windows.Forms.PictureBox();
             this.cancel = new System.Windows.Forms.Button();
             this.selectUserEmp = new System.Windows.Forms.Button();
-            this.empUserMovies = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.empBack = new System.Windows.Forms.Button();
             this.ManageEmployees = new System.Windows.Forms.TabPage();
-            this.addEmpMessage = new System.Windows.Forms.Label();
+            this.employees = new System.Windows.Forms.DataGridView();
+            this.SSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.value = new System.Windows.Forms.TextBox();
+            this.search = new System.Windows.Forms.Button();
+            this.dropDown = new System.Windows.Forms.ComboBox();
             this.employeeListLabel = new System.Windows.Forms.Label();
             this.changeUserTypeMang = new System.Windows.Forms.Button();
             this.PhoneNoBox = new System.Windows.Forms.TextBox();
@@ -176,29 +177,28 @@ namespace CMPT_291_Project
             this.changeUserType = new System.Windows.Forms.Button();
             this.UserTabs = new System.Windows.Forms.TabControl();
             this.UserType = new System.Windows.Forms.Label();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.userIDEmp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.userListEmp1 = new System.Windows.Forms.ListView();
-            this.value = new System.Windows.Forms.TextBox();
-            this.search = new System.Windows.Forms.Button();
-            this.dropDown = new System.Windows.Forms.ComboBox();
-            this.employees = new System.Windows.Forms.DataGridView();
-            this.SSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addUserMessage = new System.Windows.Forms.Label();
+            this.addEmpMsg = new System.Windows.Forms.Label();
             this.EmployeeControls.SuspendLayout();
             this.ManageUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicEmp)).BeginInit();
             this.ManageEmployees.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeePic)).BeginInit();
             this.manageMovies.SuspendLayout();
             this.RentalPage.SuspendLayout();
             this.UserPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPic)).BeginInit();
             this.UserTabs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // EmployeeUI
@@ -238,9 +238,12 @@ namespace CMPT_291_Project
             // 
             // ManageUser
             // 
+            this.ManageUser.Controls.Add(this.addUserMessage);
+            this.ManageUser.Controls.Add(this.textBox1);
+            this.ManageUser.Controls.Add(this.button1);
+            this.ManageUser.Controls.Add(this.comboBox1);
             this.ManageUser.Controls.Add(this.userListLabel1);
             this.ManageUser.Controls.Add(this.userTypeEmp);
-            this.ManageUser.Controls.Add(this.employeeSearchBar1);
             this.ManageUser.Controls.Add(this.getCred);
             this.ManageUser.Controls.Add(this.getPlan);
             this.ManageUser.Controls.Add(this.getEmail);
@@ -252,7 +255,6 @@ namespace CMPT_291_Project
             this.ManageUser.Controls.Add(this.getAcctNo);
             this.ManageUser.Controls.Add(this.getLast);
             this.ManageUser.Controls.Add(this.getFirst);
-            this.ManageUser.Controls.Add(this.empNameSearch1);
             this.ManageUser.Controls.Add(this.getDate);
             this.ManageUser.Controls.Add(this.finish);
             this.ManageUser.Controls.Add(this.setFirst);
@@ -278,15 +280,13 @@ namespace CMPT_291_Project
             this.ManageUser.Controls.Add(this.userPlanEmp);
             this.ManageUser.Controls.Add(this.userAcctNoEmp);
             this.ManageUser.Controls.Add(this.userNameEmp);
-            this.ManageUser.Controls.Add(this.empAcctNoSearch1);
             this.ManageUser.Controls.Add(this.addUserEmp1);
             this.ManageUser.Controls.Add(this.userActivityEmp);
             this.ManageUser.Controls.Add(this.userPicEmp);
             this.ManageUser.Controls.Add(this.cancel);
             this.ManageUser.Controls.Add(this.selectUserEmp);
-            this.ManageUser.Controls.Add(this.empUserMovies);
             this.ManageUser.Controls.Add(this.empBack);
-            this.ManageUser.Controls.Add(this.userListEmp1);
+            this.ManageUser.Controls.Add(this.dataGridView1);
             this.ManageUser.Location = new System.Drawing.Point(4, 42);
             this.ManageUser.Name = "ManageUser";
             this.ManageUser.Padding = new System.Windows.Forms.Padding(3);
@@ -314,14 +314,6 @@ namespace CMPT_291_Project
             this.userTypeEmp.Text = "Change User Type";
             this.userTypeEmp.UseVisualStyleBackColor = true;
             this.userTypeEmp.Click += new System.EventHandler(this.userTypeEmp_Click);
-            // 
-            // employeeSearchBar1
-            // 
-            this.employeeSearchBar1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeSearchBar1.Location = new System.Drawing.Point(20, 476);
-            this.employeeSearchBar1.Name = "employeeSearchBar1";
-            this.employeeSearchBar1.Size = new System.Drawing.Size(509, 27);
-            this.employeeSearchBar1.TabIndex = 144;
             // 
             // getCred
             // 
@@ -422,16 +414,6 @@ namespace CMPT_291_Project
             this.getFirst.TabIndex = 171;
             this.getFirst.Visible = false;
             // 
-            // empNameSearch1
-            // 
-            this.empNameSearch1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empNameSearch1.Location = new System.Drawing.Point(20, 509);
-            this.empNameSearch1.Name = "empNameSearch1";
-            this.empNameSearch1.Size = new System.Drawing.Size(156, 28);
-            this.empNameSearch1.TabIndex = 143;
-            this.empNameSearch1.Text = "Search by Name";
-            this.empNameSearch1.UseVisualStyleBackColor = true;
-            // 
             // getDate
             // 
             this.getDate.CalendarFont = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -445,13 +427,14 @@ namespace CMPT_291_Project
             // finish
             // 
             this.finish.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.finish.Location = new System.Drawing.Point(343, 388);
+            this.finish.Location = new System.Drawing.Point(343, 398);
             this.finish.Name = "finish";
             this.finish.Size = new System.Drawing.Size(88, 28);
             this.finish.TabIndex = 170;
             this.finish.Text = "Add ";
             this.finish.UseVisualStyleBackColor = true;
             this.finish.Visible = false;
+            this.finish.Click += new System.EventHandler(this.finish_Click_2);
             // 
             // setFirst
             // 
@@ -705,20 +688,10 @@ namespace CMPT_291_Project
             this.userNameEmp.Text = "User\'s Name";
             this.userNameEmp.Visible = false;
             // 
-            // empAcctNoSearch1
-            // 
-            this.empAcctNoSearch1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empAcctNoSearch1.Location = new System.Drawing.Point(182, 509);
-            this.empAcctNoSearch1.Name = "empAcctNoSearch1";
-            this.empAcctNoSearch1.Size = new System.Drawing.Size(176, 28);
-            this.empAcctNoSearch1.TabIndex = 145;
-            this.empAcctNoSearch1.Text = "Search by Acct. No.";
-            this.empAcctNoSearch1.UseVisualStyleBackColor = true;
-            // 
             // addUserEmp1
             // 
             this.addUserEmp1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addUserEmp1.Location = new System.Drawing.Point(689, 402);
+            this.addUserEmp1.Location = new System.Drawing.Point(861, 442);
             this.addUserEmp1.Name = "addUserEmp1";
             this.addUserEmp1.Size = new System.Drawing.Size(88, 28);
             this.addUserEmp1.TabIndex = 141;
@@ -749,7 +722,7 @@ namespace CMPT_291_Project
             // cancel
             // 
             this.cancel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancel.Location = new System.Drawing.Point(249, 387);
+            this.cancel.Location = new System.Drawing.Point(249, 397);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(88, 28);
             this.cancel.TabIndex = 183;
@@ -760,37 +733,13 @@ namespace CMPT_291_Project
             // selectUserEmp
             // 
             this.selectUserEmp.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectUserEmp.Location = new System.Drawing.Point(622, 403);
+            this.selectUserEmp.Location = new System.Drawing.Point(794, 443);
             this.selectUserEmp.Name = "selectUserEmp";
             this.selectUserEmp.Size = new System.Drawing.Size(61, 27);
             this.selectUserEmp.TabIndex = 186;
             this.selectUserEmp.Text = "Select";
             this.selectUserEmp.UseVisualStyleBackColor = true;
             this.selectUserEmp.Click += new System.EventHandler(this.selectUserEmp_Click_1);
-            // 
-            // empUserMovies
-            // 
-            this.empUserMovies.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.empUserMovies.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empUserMovies.HideSelection = false;
-            this.empUserMovies.Location = new System.Drawing.Point(22, 107);
-            this.empUserMovies.Name = "empUserMovies";
-            this.empUserMovies.Size = new System.Drawing.Size(451, 311);
-            this.empUserMovies.TabIndex = 182;
-            this.empUserMovies.UseCompatibleStateImageBehavior = false;
-            this.empUserMovies.View = System.Windows.Forms.View.Details;
-            this.empUserMovies.Visible = false;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Movie Title";
-            this.columnHeader1.Width = 109;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "ID";
             // 
             // empBack
             // 
@@ -806,11 +755,10 @@ namespace CMPT_291_Project
             // 
             // ManageEmployees
             // 
-            this.ManageEmployees.Controls.Add(this.employees);
+            this.ManageEmployees.Controls.Add(this.addEmpMsg);
             this.ManageEmployees.Controls.Add(this.value);
             this.ManageEmployees.Controls.Add(this.search);
             this.ManageEmployees.Controls.Add(this.dropDown);
-            this.ManageEmployees.Controls.Add(this.addEmpMessage);
             this.ManageEmployees.Controls.Add(this.employeeListLabel);
             this.ManageEmployees.Controls.Add(this.changeUserTypeMang);
             this.ManageEmployees.Controls.Add(this.PhoneNoBox);
@@ -849,6 +797,7 @@ namespace CMPT_291_Project
             this.ManageEmployees.Controls.Add(this.EmpFirstNameBox);
             this.ManageEmployees.Controls.Add(this.EmpLastNameBox);
             this.ManageEmployees.Controls.Add(this.EmpLastName);
+            this.ManageEmployees.Controls.Add(this.employees);
             this.ManageEmployees.Location = new System.Drawing.Point(4, 42);
             this.ManageEmployees.Name = "ManageEmployees";
             this.ManageEmployees.Padding = new System.Windows.Forms.Padding(3);
@@ -857,16 +806,79 @@ namespace CMPT_291_Project
             this.ManageEmployees.Text = "Manage Employees";
             this.ManageEmployees.UseVisualStyleBackColor = true;
             // 
-            // addEmpMessage
+            // employees
             // 
-            this.addEmpMessage.AutoSize = true;
-            this.addEmpMessage.ForeColor = System.Drawing.Color.Black;
-            this.addEmpMessage.Location = new System.Drawing.Point(616, 186);
-            this.addEmpMessage.Name = "addEmpMessage";
-            this.addEmpMessage.Size = new System.Drawing.Size(132, 33);
-            this.addEmpMessage.TabIndex = 238;
-            this.addEmpMessage.Text = "Message";
-            this.addEmpMessage.Visible = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SSN,
+            this.firstName,
+            this.Surname,
+            this.PhoneNum});
+            this.employees.Location = new System.Drawing.Point(16, 50);
+            this.employees.Name = "employees";
+            this.employees.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.employees.Size = new System.Drawing.Size(770, 420);
+            this.employees.TabIndex = 247;
+            // 
+            // SSN
+            // 
+            this.SSN.HeaderText = "SSN";
+            this.SSN.Name = "SSN";
+            this.SSN.Width = 200;
+            // 
+            // firstName
+            // 
+            this.firstName.HeaderText = "Name";
+            this.firstName.Name = "firstName";
+            this.firstName.Width = 150;
+            // 
+            // Surname
+            // 
+            this.Surname.HeaderText = "Surname";
+            this.Surname.Name = "Surname";
+            this.Surname.Width = 150;
+            // 
+            // PhoneNum
+            // 
+            this.PhoneNum.HeaderText = "Phone No.";
+            this.PhoneNum.Name = "PhoneNum";
+            this.PhoneNum.Width = 200;
+            // 
+            // value
+            // 
+            this.value.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value.Location = new System.Drawing.Point(260, 476);
+            this.value.Name = "value";
+            this.value.Size = new System.Drawing.Size(91, 27);
+            this.value.TabIndex = 250;
+            // 
+            // search
+            // 
+            this.search.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search.Location = new System.Drawing.Point(360, 476);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(71, 28);
+            this.search.TabIndex = 249;
+            this.search.Text = "Search";
+            this.search.UseVisualStyleBackColor = true;
+            this.search.Click += new System.EventHandler(this.search_Click);
+            // 
+            // dropDown
+            // 
+            this.dropDown.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dropDown.FormattingEnabled = true;
+            this.dropDown.Location = new System.Drawing.Point(16, 476);
+            this.dropDown.Name = "dropDown";
+            this.dropDown.Size = new System.Drawing.Size(238, 27);
+            this.dropDown.TabIndex = 248;
             // 
             // employeeListLabel
             // 
@@ -1769,118 +1781,111 @@ namespace CMPT_291_Project
             this.UserType.TabIndex = 186;
             this.UserType.Text = "Type of User?";
             // 
-            // columnHeader3
+            // textBox1
             // 
-            this.columnHeader3.Text = "First Name";
-            this.columnHeader3.Width = 109;
+            this.textBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(260, 476);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(91, 27);
+            this.textBox1.TabIndex = 257;
             // 
-            // columnHeader4
+            // button1
             // 
-            this.columnHeader4.Text = "Last Name";
-            this.columnHeader4.Width = 105;
+            this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(360, 476);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 28);
+            this.button1.TabIndex = 256;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // userIDEmp
+            // comboBox1
             // 
-            this.userIDEmp.Text = "ID";
+            this.comboBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(16, 476);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(238, 27);
+            this.comboBox1.TabIndex = 255;
             // 
-            // userListEmp1
+            // dataGridView1
             // 
-            this.userListEmp1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4,
-            this.userIDEmp});
-            this.userListEmp1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userListEmp1.HideSelection = false;
-            this.userListEmp1.Location = new System.Drawing.Point(16, 50);
-            this.userListEmp1.Name = "userListEmp1";
-            this.userListEmp1.Size = new System.Drawing.Size(600, 380);
-            this.userListEmp1.TabIndex = 142;
-            this.userListEmp1.UseCompatibleStateImageBehavior = false;
-            this.userListEmp1.View = System.Windows.Forms.View.Details;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridView1.Location = new System.Drawing.Point(16, 50);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridView1.Size = new System.Drawing.Size(770, 420);
+            this.dataGridView1.TabIndex = 254;
             // 
-            // value
+            // dataGridViewTextBoxColumn1
             // 
-            this.value.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.value.Location = new System.Drawing.Point(260, 476);
-            this.value.Name = "value";
-            this.value.Size = new System.Drawing.Size(91, 27);
-            this.value.TabIndex = 250;
+            this.dataGridViewTextBoxColumn1.HeaderText = "SSN";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 200;
             // 
-            // search
+            // dataGridViewTextBoxColumn2
             // 
-            this.search.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(360, 476);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(71, 28);
-            this.search.TabIndex = 249;
-            this.search.Text = "Search";
-            this.search.UseVisualStyleBackColor = true;
-            this.search.Click += new System.EventHandler(this.search_Click);
+            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
-            // dropDown
+            // dataGridViewTextBoxColumn3
             // 
-            this.dropDown.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dropDown.FormattingEnabled = true;
-            this.dropDown.Location = new System.Drawing.Point(16, 476);
-            this.dropDown.Name = "dropDown";
-            this.dropDown.Size = new System.Drawing.Size(238, 27);
-            this.dropDown.TabIndex = 248;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Surname";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 150;
             // 
-            // employees
+            // dataGridViewTextBoxColumn4
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.employees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SSN,
-            this.firstName,
-            this.Surname,
-            this.PhoneNum});
-            this.employees.Location = new System.Drawing.Point(16, 50);
-            this.employees.Name = "employees";
-            this.employees.Size = new System.Drawing.Size(770, 420);
-            this.employees.TabIndex = 247;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Phone No.";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 200;
             // 
-            // SSN
+            // addUserMessage
             // 
-            this.SSN.HeaderText = "SSN";
-            this.SSN.Name = "SSN";
-            this.SSN.Width = 200;
+            this.addUserMessage.AutoSize = true;
+            this.addUserMessage.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addUserMessage.Location = new System.Drawing.Point(249, 377);
+            this.addUserMessage.Name = "addUserMessage";
+            this.addUserMessage.Size = new System.Drawing.Size(53, 13);
+            this.addUserMessage.TabIndex = 258;
+            this.addUserMessage.Text = "Message";
+            this.addUserMessage.Visible = false;
             // 
-            // firstName
+            // addEmpMsg
             // 
-            this.firstName.HeaderText = "Name";
-            this.firstName.Name = "firstName";
-            this.firstName.Width = 150;
+            this.addEmpMsg.AutoSize = true;
+            this.addEmpMsg.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEmpMsg.Location = new System.Drawing.Point(249, 370);
+            this.addEmpMsg.Name = "addEmpMsg";
+            this.addEmpMsg.Size = new System.Drawing.Size(53, 13);
+            this.addEmpMsg.TabIndex = 259;
+            this.addEmpMsg.Text = "Message";
+            this.addEmpMsg.Visible = false;
             // 
-            // Surname
-            // 
-            this.Surname.HeaderText = "Surname";
-            this.Surname.Name = "Surname";
-            this.Surname.Width = 150;
-            // 
-            // PhoneNum
-            // 
-            this.PhoneNum.HeaderText = "Phone No.";
-            this.PhoneNum.Name = "PhoneNum";
-            this.PhoneNum.Width = 200;
-            // 
-            // UserAndEmployee
+            // UserAndEmployee2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 599);
+            this.Controls.Add(this.EmployeeControls);
+            this.Controls.Add(this.UserTabs);
             this.Controls.Add(this.UserType);
             this.Controls.Add(this.EmployeeUI);
             this.Controls.Add(this.CustomerUI);
-            this.Controls.Add(this.EmployeeControls);
-            this.Controls.Add(this.UserTabs);
             this.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UserAndEmployee2";
@@ -1892,6 +1897,7 @@ namespace CMPT_291_Project
             ((System.ComponentModel.ISupportInitialize)(this.userPicEmp)).EndInit();
             this.ManageEmployees.ResumeLayout(false);
             this.ManageEmployees.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeePic)).EndInit();
             this.manageMovies.ResumeLayout(false);
             this.RentalPage.ResumeLayout(false);
@@ -1900,7 +1906,7 @@ namespace CMPT_291_Project
             this.UserPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPic)).EndInit();
             this.UserTabs.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.employees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1911,7 +1917,6 @@ namespace CMPT_291_Project
         private System.Windows.Forms.Button CustomerUI;
         private System.Windows.Forms.TabControl EmployeeControls;
         private System.Windows.Forms.TabPage ManageUser;
-        private System.Windows.Forms.TextBox employeeSearchBar1;
         private System.Windows.Forms.TextBox getCred;
         private System.Windows.Forms.TextBox getPlan;
         private System.Windows.Forms.TextBox getEmail;
@@ -1923,7 +1928,6 @@ namespace CMPT_291_Project
         private System.Windows.Forms.TextBox getAcctNo;
         private System.Windows.Forms.TextBox getLast;
         private System.Windows.Forms.TextBox getFirst;
-        private System.Windows.Forms.Button empNameSearch1;
         private System.Windows.Forms.DateTimePicker getDate;
         private System.Windows.Forms.Button finish;
         private System.Windows.Forms.Label setFirst;
@@ -1949,15 +1953,11 @@ namespace CMPT_291_Project
         private System.Windows.Forms.Label userPlanEmp;
         private System.Windows.Forms.Label userAcctNoEmp;
         private System.Windows.Forms.Label userNameEmp;
-        private System.Windows.Forms.Button empAcctNoSearch1;
         private System.Windows.Forms.Button addUserEmp1;
         private System.Windows.Forms.ProgressBar userActivityEmp;
         private System.Windows.Forms.PictureBox userPicEmp;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button selectUserEmp;
-        private System.Windows.Forms.ListView empUserMovies;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button empBack;
         private System.Windows.Forms.Label userListLabel1;
         private System.Windows.Forms.TabPage RentalPage;
@@ -2050,11 +2050,6 @@ namespace CMPT_291_Project
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.Label addEmpMessage;
-        private System.Windows.Forms.ListView userListEmp1;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader userIDEmp;
         private System.Windows.Forms.TextBox value;
         private System.Windows.Forms.Button search;
         private System.Windows.Forms.ComboBox dropDown;
@@ -2063,6 +2058,16 @@ namespace CMPT_291_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNum;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Label addUserMessage;
+        private System.Windows.Forms.Label addEmpMsg;
     }
 }
 
