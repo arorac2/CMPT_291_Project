@@ -1,7 +1,7 @@
 ﻿
 namespace CMPT_291_Project
 {
-	partial class Form1
+	partial class ActorSearch
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,7 +29,7 @@ namespace CMPT_291_Project
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CMPT_291_Project.ActorSearch));
             this.actorName = new System.Windows.Forms.Label();
             this.appearsIn = new System.Windows.Forms.Label();
             this.ratingBox = new System.Windows.Forms.ComboBox();

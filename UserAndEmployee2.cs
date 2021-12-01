@@ -673,7 +673,7 @@ namespace CMPT_291_Project
         private void userSettings_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserSettings settingsWindow = new UserSettings();
+            UserSettings2 settingsWindow = new UserSettings2();
             settingsWindow.Show();
         }
 
@@ -694,7 +694,7 @@ namespace CMPT_291_Project
         private void searchActor_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 searchActor = new Form1();
+            ActorSearch searchActor = new ActorSearch();
             searchActor.Show();
         }
         /*

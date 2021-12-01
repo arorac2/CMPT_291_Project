@@ -3,11 +3,11 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 namespace CMPT_291_Project
 {
-	public partial class Form1 : Form
+	public partial class ActorSearch : Form
 	{
         protected List<Actor> actorSet = new List<Actor>();
 
-		public Form1()
+		public ActorSearch()
 		{
 			
 			InitializeComponent();

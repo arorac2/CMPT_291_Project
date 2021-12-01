@@ -1,6 +1,7 @@
-﻿namespace CMPT_291_Project
+﻿
+namespace CMPT_291_Project
 {
-    partial class UserSettings
+    partial class UserSettings2
     {
         /// <summary>
         /// Required designer variable.
@@ -57,6 +58,16 @@
             this.updatePaymentButton = new System.Windows.Forms.Button();
             this.updateStatusLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.cityTextBox = new System.Windows.Forms.TextBox();
+            this.cityLabel = new System.Windows.Forms.Label();
+            this.stateTextBox = new System.Windows.Forms.TextBox();
+            this.stateLabel = new System.Windows.Forms.Label();
+            this.zipTextBox = new System.Windows.Forms.TextBox();
+            this.zipLabel = new System.Windows.Forms.Label();
+            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.phoneLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.recentActivityControl.SuspendLayout();
             this.recentlyWatchedTab.SuspendLayout();
@@ -79,7 +90,7 @@
             // 
             this.myActivityLabel.AutoSize = true;
             this.myActivityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myActivityLabel.Location = new System.Drawing.Point(50, 252);
+            this.myActivityLabel.Location = new System.Drawing.Point(54, 388);
             this.myActivityLabel.Name = "myActivityLabel";
             this.myActivityLabel.Size = new System.Drawing.Size(145, 31);
             this.myActivityLabel.TabIndex = 6;
@@ -91,7 +102,7 @@
             this.recentActivityControl.Controls.Add(this.movieRatingsTab);
             this.recentActivityControl.Controls.Add(this.actorRatingsTab);
             this.recentActivityControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recentActivityControl.Location = new System.Drawing.Point(56, 286);
+            this.recentActivityControl.Location = new System.Drawing.Point(60, 422);
             this.recentActivityControl.Name = "recentActivityControl";
             this.recentActivityControl.SelectedIndex = 0;
             this.recentActivityControl.Size = new System.Drawing.Size(506, 273);
@@ -123,6 +134,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // watchedDateViewedColumn
             // 
@@ -267,21 +279,21 @@
             // 
             // paymentCardTextBox
             // 
-            this.paymentCardTextBox.Location = new System.Drawing.Point(179, 157);
+            this.paymentCardTextBox.Location = new System.Drawing.Point(192, 157);
             this.paymentCardTextBox.Name = "paymentCardTextBox";
             this.paymentCardTextBox.Size = new System.Drawing.Size(139, 20);
             this.paymentCardTextBox.TabIndex = 15;
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(179, 133);
+            this.lastNameTextBox.Location = new System.Drawing.Point(192, 133);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(139, 20);
             this.lastNameTextBox.TabIndex = 16;
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(179, 109);
+            this.firstNameTextBox.Location = new System.Drawing.Point(192, 109);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(139, 20);
             this.firstNameTextBox.TabIndex = 17;
@@ -294,16 +306,17 @@
             "Two Movies",
             "Three Movies",
             "Unlimited Movies"});
-            this.planSelectDropdown.Location = new System.Drawing.Point(179, 180);
+            this.planSelectDropdown.Location = new System.Drawing.Point(192, 180);
             this.planSelectDropdown.Name = "planSelectDropdown";
             this.planSelectDropdown.Size = new System.Drawing.Size(139, 21);
             this.planSelectDropdown.TabIndex = 18;
             // 
             // updatePaymentButton
             // 
-            this.updatePaymentButton.Location = new System.Drawing.Point(56, 204);
+            this.updatePaymentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatePaymentButton.Location = new System.Drawing.Point(56, 330);
             this.updatePaymentButton.Name = "updatePaymentButton";
-            this.updatePaymentButton.Size = new System.Drawing.Size(94, 23);
+            this.updatePaymentButton.Size = new System.Drawing.Size(94, 33);
             this.updatePaymentButton.TabIndex = 19;
             this.updatePaymentButton.Text = "Update";
             this.updatePaymentButton.UseVisualStyleBackColor = true;
@@ -323,29 +336,124 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(744, 166);
+            this.label1.Location = new System.Drawing.Point(348, 219);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 21;
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Location = new System.Drawing.Point(192, 205);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(139, 20);
+            this.addressTextBox.TabIndex = 23;
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLabel.Location = new System.Drawing.Point(56, 205);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(76, 20);
+            this.addressLabel.TabIndex = 22;
+            this.addressLabel.Text = "Address: ";
+            // 
+            // cityTextBox
+            // 
+            this.cityTextBox.Location = new System.Drawing.Point(192, 230);
+            this.cityTextBox.Name = "cityTextBox";
+            this.cityTextBox.Size = new System.Drawing.Size(139, 20);
+            this.cityTextBox.TabIndex = 25;
+            // 
+            // cityLabel
+            // 
+            this.cityLabel.AutoSize = true;
+            this.cityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityLabel.Location = new System.Drawing.Point(56, 230);
+            this.cityLabel.Name = "cityLabel";
+            this.cityLabel.Size = new System.Drawing.Size(43, 20);
+            this.cityLabel.TabIndex = 24;
+            this.cityLabel.Text = "City: ";
+            // 
+            // stateTextBox
+            // 
+            this.stateTextBox.Location = new System.Drawing.Point(192, 256);
+            this.stateTextBox.Name = "stateTextBox";
+            this.stateTextBox.Size = new System.Drawing.Size(139, 20);
+            this.stateTextBox.TabIndex = 27;
+            // 
+            // stateLabel
+            // 
+            this.stateLabel.AutoSize = true;
+            this.stateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stateLabel.Location = new System.Drawing.Point(56, 256);
+            this.stateLabel.Name = "stateLabel";
+            this.stateLabel.Size = new System.Drawing.Size(120, 20);
+            this.stateLabel.TabIndex = 26;
+            this.stateLabel.Text = "State/ Province:";
+            // 
+            // zipTextBox
+            // 
+            this.zipTextBox.Location = new System.Drawing.Point(192, 281);
+            this.zipTextBox.Name = "zipTextBox";
+            this.zipTextBox.Size = new System.Drawing.Size(139, 20);
+            this.zipTextBox.TabIndex = 29;
+            // 
+            // zipLabel
+            // 
+            this.zipLabel.AutoSize = true;
+            this.zipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zipLabel.Location = new System.Drawing.Point(56, 281);
+            this.zipLabel.Name = "zipLabel";
+            this.zipLabel.Size = new System.Drawing.Size(129, 20);
+            this.zipLabel.TabIndex = 28;
+            this.zipLabel.Text = "ZIP/ Postal code:";
+            // 
+            // phoneNumberTextBox
+            // 
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(192, 307);
+            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(139, 20);
+            this.phoneNumberTextBox.TabIndex = 31;
+            // 
+            // phoneLabel
+            // 
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneLabel.Location = new System.Drawing.Point(56, 307);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(121, 20);
+            this.phoneLabel.TabIndex = 30;
+            this.phoneLabel.Text = "Phone number: ";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(918, 18);
+            this.button1.Location = new System.Drawing.Point(893, 18);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
+            this.button1.TabIndex = 32;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // UserSettings
+            // UserSettings2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1005, 579);
+            this.ClientSize = new System.Drawing.Size(1025, 601);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.phoneNumberTextBox);
+            this.Controls.Add(this.phoneLabel);
+            this.Controls.Add(this.zipTextBox);
+            this.Controls.Add(this.zipLabel);
+            this.Controls.Add(this.stateTextBox);
+            this.Controls.Add(this.stateLabel);
+            this.Controls.Add(this.cityTextBox);
+            this.Controls.Add(this.cityLabel);
+            this.Controls.Add(this.addressTextBox);
+            this.Controls.Add(this.addressLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.updateStatusLabel);
             this.Controls.Add(this.updatePaymentButton);
@@ -361,9 +469,9 @@
             this.Controls.Add(this.recentActivityControl);
             this.Controls.Add(this.myActivityLabel);
             this.Controls.Add(this.settingsLabel);
-            this.Name = "UserSettings";
+            this.Name = "UserSettings2";
             this.Text = "Settings";
-            this.Load += new System.EventHandler(this.UserSettings_Load);
+            this.Load += new System.EventHandler(this.UserSettings2_Load);
             this.recentActivityControl.ResumeLayout(false);
             this.recentlyWatchedTab.ResumeLayout(false);
             this.movieRatingsTab.ResumeLayout(false);
@@ -403,6 +511,16 @@
         private System.Windows.Forms.Button updatePaymentButton;
         private System.Windows.Forms.Label updateStatusLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.TextBox cityTextBox;
+        private System.Windows.Forms.Label cityLabel;
+        private System.Windows.Forms.TextBox stateTextBox;
+        private System.Windows.Forms.Label stateLabel;
+        private System.Windows.Forms.TextBox zipTextBox;
+        private System.Windows.Forms.Label zipLabel;
+        private System.Windows.Forms.TextBox phoneNumberTextBox;
+        private System.Windows.Forms.Label phoneLabel;
         private System.Windows.Forms.Button button1;
     }
 }
