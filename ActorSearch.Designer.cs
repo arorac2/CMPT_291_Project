@@ -1,7 +1,7 @@
 ﻿
 namespace CMPT_291_Project
 {
-	partial class Form1
+	partial class ActorSearch
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,14 +29,11 @@ namespace CMPT_291_Project
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.actorName = new System.Windows.Forms.Label();
             this.appearsIn = new System.Windows.Forms.Label();
             this.ratingBox = new System.Windows.Forms.ComboBox();
             this.ratingText = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.getNameBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.getInfo = new System.Windows.Forms.Button();
             this.moviesListStr = new System.Windows.Forms.Label();
             this.modeText = new System.Windows.Forms.Label();
@@ -54,7 +51,11 @@ namespace CMPT_291_Project
             this.addActorButton = new System.Windows.Forms.Button();
             this.searchByIDButton = new System.Windows.Forms.Button();
             this.returnBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.actorGrid = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.actorGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // actorName
@@ -106,18 +107,6 @@ namespace CMPT_291_Project
             this.ratingText.Text = "Rating (1-5):";
             this.ratingText.Visible = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(417, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(347, 296);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            // 
             // getNameBox
             // 
             this.getNameBox.Location = new System.Drawing.Point(37, 366);
@@ -125,15 +114,6 @@ namespace CMPT_291_Project
             this.getNameBox.Size = new System.Drawing.Size(305, 20);
             this.getNameBox.TabIndex = 8;
             this.getNameBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 350);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(229, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "FOR TESTING, ENTER ACTOR NAME HERE";
             // 
             // getInfo
             // 
@@ -287,7 +267,7 @@ namespace CMPT_291_Project
             this.searchByIDButton.Name = "searchByIDButton";
             this.searchByIDButton.Size = new System.Drawing.Size(111, 23);
             this.searchByIDButton.TabIndex = 27;
-            this.searchByIDButton.Text = "Search by ID";
+            this.searchByIDButton.Text = "Show All";
             this.searchByIDButton.UseVisualStyleBackColor = true;
             this.searchByIDButton.Visible = false;
             this.searchByIDButton.Click += new System.EventHandler(this.searchByIDButton_Click);
@@ -302,11 +282,39 @@ namespace CMPT_291_Project
             this.returnBtn.UseVisualStyleBackColor = true;
             this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
             // 
-            // Form1
+            // actorGrid
+            // 
+            this.actorGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.actorGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.actorGrid.Location = new System.Drawing.Point(460, 105);
+            this.actorGrid.Name = "actorGrid";
+            this.actorGrid.Size = new System.Drawing.Size(328, 281);
+            this.actorGrid.TabIndex = 29;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Age";
+            this.Column3.Name = "Column3";
+            // 
+            // ActorSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.actorGrid);
             this.Controls.Add(this.returnBtn);
             this.Controls.Add(this.searchByIDButton);
             this.Controls.Add(this.addActorButton);
@@ -324,17 +332,15 @@ namespace CMPT_291_Project
             this.Controls.Add(this.modeText);
             this.Controls.Add(this.moviesListStr);
             this.Controls.Add(this.getInfo);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.getNameBox);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ratingText);
             this.Controls.Add(this.ratingBox);
             this.Controls.Add(this.appearsIn);
             this.Controls.Add(this.actorName);
-            this.Name = "Form1";
+            this.Name = "ActorSearch";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actorGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,9 +352,7 @@ namespace CMPT_291_Project
 		private System.Windows.Forms.Label appearsIn;
 		private System.Windows.Forms.ComboBox ratingBox;
 		private System.Windows.Forms.Label ratingText;
-		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.TextBox getNameBox;
-		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Button getInfo;
 		private System.Windows.Forms.Label moviesListStr;
 		private System.Windows.Forms.Label modeText;
@@ -366,6 +370,10 @@ namespace CMPT_291_Project
 		private System.Windows.Forms.Button addActorButton;
 		private System.Windows.Forms.Button searchByIDButton;
         private System.Windows.Forms.Button returnBtn;
+        private System.Windows.Forms.DataGridView actorGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
 

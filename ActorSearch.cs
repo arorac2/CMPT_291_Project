@@ -1,17 +1,48 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+
 namespace CMPT_291_Project
 {
-	public partial class Form1 : Form
-	{
-        protected List<Actor> actorSet = new List<Actor>();
+	public partial class ActorSearch : Form
 
-		public Form1()
+	{
+		public SqlConnection myConnection;
+		public SqlCommand myCommand;
+		public SqlDataReader myReader;
+		protected List<Actor> actorSet = new List<Actor>();
+
+		public ActorSearch()
 		{
 			
 			InitializeComponent();
 			HideAll();
+
+			String connectionString = "Server = DESKTOP-1JJOH8H; Database = MovieRental; Trusted_Connection = yes;";
+
+
+            /* Starting the connection */
+            /*  SqlConnection myConnection = new SqlConnection("user id=temp2;" + // Username
+                                         "password=adminadmin;" + // Password
+                                         "server=localhost;" + // IP for the server
+                                                               //"Trusted_Connection=yes;" +
+                                         "database=ConnectTutorial; " + // Database to connect to
+                                         "connection timeout=30"); // Timeout in seconds */
+
+            System.Data.SqlClient.SqlConnection myConnection = new SqlConnection(connectionString); // Timeout in seconds
+
+			try
+			{
+				myConnection.Open(); // Open connection
+				myCommand = new SqlCommand();
+				myCommand.Connection = myConnection; // Link the command stream to the connection
+			}
+			catch (Exception e)
+			{
+				MessageBox.Show(e.ToString(), "Error");
+				this.Close();
+			}
 		}
 
 		public class Actor
@@ -79,30 +110,31 @@ namespace CMPT_291_Project
 
 		private void getInfo_Click_1(object sender, EventArgs e)
 		{
-			actorName.Text = "Actor Not Found";
-			actorName.Visible = true;
-			
+			myCommand.CommandText = "select * from actors where name like '%"+getNameBox.Text+"%'";
+			try
+			{
+				myReader = myCommand.ExecuteReader();
 
-			foreach (Actor a in actorSet)
-            {
-				if (a.Name.Equals(getNameBox.Text)) 
-				{ 
+				actorGrid.Rows.Clear();
+				while (myReader.Read())
+				{
+					actorGrid.Rows.Add(myReader["id"].ToString(), myReader["name"].ToString(), myReader["age"].ToString());
+				}
+				myReader.Close();
 
-					actorName.Visible = true;
-					ratingText.Visible = true;
-					ratingBox.Visible = true;
-					appearsIn.Visible = true;
-					moviesListStr.Visible = true;
-					actorName.Visible = true;
-					pictureBox1.Visible = true;
+				getActorName.Text = "";
+				getActorAge.Text = "";
+				getActorID.Text = "";
+				getAppearances.Text = "";
 
-					actorName.Text = a.Name;
-					moviesListStr.Text = a.Appearances; 
+				myCommand.ExecuteNonQuery();
+			}
+			catch (Exception e2)
+			{
 
-                }
-            }
 
-			getNameBox.Text = "";
+				MessageBox.Show(e2.ToString(), "Error");
+			}
 
 
 		}
@@ -116,8 +148,6 @@ namespace CMPT_291_Project
 			appearsIn.Visible = false;
 			moviesListStr.Visible = false;
 			actorName.Visible = false;
-			pictureBox1.Visible = false;
-			label4.Visible = false;
 			getNameBox.Visible = false;
 			getInfo.Visible = false;
 			enterNameLabel.Visible = false;
@@ -156,7 +186,6 @@ namespace CMPT_291_Project
 			if (checkBoxSearch.Checked)
 			{
 				HideAll();
-				label4.Visible = true;
 				getNameBox.Visible = true;
 				getInfo.Visible = true;
 				searchByIDButton.Visible = true;
@@ -170,6 +199,7 @@ namespace CMPT_291_Project
 
 		private void addActorButton_Click(object sender, EventArgs e)
 		{
+			/*
 			var currentActor = new Actor(getActorName.Text, Int32.Parse(getActorAge.Text), Int32.Parse(getActorID.Text), getAppearances.Text);
 			actorSet.Add(currentActor);
 			Console.WriteLine(currentActor);
@@ -178,36 +208,64 @@ namespace CMPT_291_Project
 			getActorID.Text = "";
 			getAppearances.Text = "";
 			Console.WriteLine("test");
-			
+			*/
+			try
+			{
+				
+
+				myCommand.CommandText = "SET IDENTITY_INSERT [dbo].[actors] ON insert into [dbo].[actors] ( [age], [name], [id] ) values (" + getActorID.Text + ",'" + getActorName.Text + "'," + getActorAge.Text + ")";
+				MessageBox.Show(myCommand.CommandText);
+
+				getActorName.Text = "";
+				getActorAge.Text = "";
+				getActorID.Text = "";
+				getAppearances.Text = "";
+
+				myCommand.ExecuteNonQuery();
+			}
+			catch (Exception e2)
+			{
+
+
+				MessageBox.Show(e2.ToString(), "Error");
+			}
+
 		}
 
         private void searchByIDButton_Click(object sender, EventArgs e)
 		{
-			actorName.Text = "Actor Not Found";
-			actorName.Visible = true;
-
-
-			foreach (Actor a in actorSet)
+			myCommand.CommandText = "select * from actors";
+			try
 			{
-				if (a.ID.Equals(Int32.Parse(getNameBox.Text)))
-				{
+				myReader = myCommand.ExecuteReader();
 
-					actorName.Visible = true;
-					ratingText.Visible = true;
-					ratingBox.Visible = true;
-					appearsIn.Visible = true;
-					moviesListStr.Visible = true;
-					actorName.Visible = true;
-					pictureBox1.Visible = true;
+				actorGrid.Rows.Clear();
+				while (myReader.Read())
+                {
+					actorGrid.Rows.Add(myReader["id"].ToString(), myReader["name"].ToString(), myReader["age"].ToString());
+                }
+				myReader.Close();
 
-					actorName.Text = a.Name;
-					moviesListStr.Text = a.Appearances;
+				getActorName.Text = "";
+				getActorAge.Text = "";
+				getActorID.Text = "";
+				getAppearances.Text = "";
 
-				}
+				myCommand.ExecuteNonQuery();
+			}
+			catch (Exception e2)
+			{
+
+
+				MessageBox.Show(e2.ToString(), "Error");
 			}
 
-			getNameBox.Text = "";
+
+
 		}
+
+
+
 
         private void returnBtn_Click(object sender, EventArgs e)
         {

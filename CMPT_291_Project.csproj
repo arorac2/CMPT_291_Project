@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ActorSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ActorSearch.Designer.cs">
+      <DependentUpon>ActorSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="MovieUI.cs">
       <SubType>Form</SubType>
@@ -58,31 +58,34 @@
     <Compile Include="MovieUI.designer.cs">
       <DependentUpon>MovieUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserAndEmployee.cs">
+    <Compile Include="MovieUI2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAndEmployee.designer.cs">
-      <DependentUpon>UserAndEmployee.cs</DependentUpon>
+    <Compile Include="MovieUI2.designer.cs">
+      <DependentUpon>MovieUI2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAndEmployee2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserAndEmployee2.designer.cs">
       <DependentUpon>UserAndEmployee2.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserSettings.cs">
+    <Compile Include="UserSettings2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserSettings.designer.cs">
-      <DependentUpon>UserSettings.cs</DependentUpon>
+    <Compile Include="UserSettings2.designer.cs">
+      <DependentUpon>UserSettings2.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ActorSearch.resx">
+      <DependentUpon>ActorSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieUI.resx">
       <DependentUpon>MovieUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieUI2.resx">
+      <DependentUpon>MovieUI2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,14 +96,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserAndEmployee.resx">
-      <DependentUpon>UserAndEmployee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserAndEmployee2.resx">
       <DependentUpon>UserAndEmployee2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserSettings.resx">
-      <DependentUpon>UserSettings.cs</DependentUpon>
+    <EmbeddedResource Include="UserSettings2.resx">
+      <DependentUpon>UserSettings2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
