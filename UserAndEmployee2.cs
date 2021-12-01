@@ -663,14 +663,14 @@ namespace CMPT_291_Project
         private void searchTitle_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MovieUI searchMovie = new MovieUI();
+            MovieUI2 searchMovie = new MovieUI2();
             searchMovie.Show();
         }
 
         private void searchGenre_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MovieUI searchMovie = new MovieUI();
+            MovieUI2 searchMovie = new MovieUI2();
             searchMovie.Show();
         }
 
