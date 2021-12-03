@@ -17,7 +17,7 @@ namespace CMPT_291_Project
 			
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new UserAndEmployee2());
+			Application.Run(new MovieManagement());
 		}
 	}
 }
