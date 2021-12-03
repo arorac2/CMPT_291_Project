@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace CMPT_291_Project
 {
@@ -16,11 +18,14 @@ namespace CMPT_291_Project
         public SqlConnection conn;
         public SqlCommand cmd;
         public SqlDataReader reader;
+        public TextInfo TI;
 
         public MovieManagement()
         {
             InitializeComponent();
             string connectionString = "Server = IANPC; Database = MovieRental; Trusted_Connection = yes;";
+
+            TI = new CultureInfo("en-US", false).TextInfo;
             conn = new SqlConnection(connectionString);
 
             try
@@ -84,6 +89,11 @@ namespace CMPT_291_Project
 
             private void MovieManagement_Load(object sender, EventArgs e)
         {
+            LoadMovieData();
+        }
+
+        public void LoadMovieData()
+        {
             cmd.CommandText = "SELECT * FROM movies";
             try
             {
@@ -115,40 +125,56 @@ namespace CMPT_291_Project
 
         private void addMovieBtn_Click(object sender, EventArgs e)
         {
-            AddMoviePopup addMoviePopup = new AddMoviePopup();
+            AddMoviePopup addMoviePopup = new AddMoviePopup(this);
             DialogResult result = addMoviePopup.ShowDialog();
 
+            cmd.CommandText = "INSERT INTO movies(title, genre, copies_in_stock) VALUES(@title, @genre, @copies)";
             if (result == DialogResult.OK)
             {
-                cmd.CommandText = "INSERT INTO movies(title, genre, copies_in_stock) VALUES(@title, @genre, @copies)";
-                if (!addMoviePopup.AllFieldsFilled())
-                {
-                    addMoviePopup.RaiseFieldsNotValidError();
-                }
-                else
-                {
-                    try
-                    {
-                        SqlParameter[] parameters = new SqlParameter[3];
-                        parameters[0] = new SqlParameter("@title", addMoviePopup.GetMovieTitle());
-                        cmd.Parameters.Add(parameters[0]);
-                        parameters[1] = new SqlParameter("@genre", addMoviePopup.GetMovieGenre());
-                        cmd.Parameters.Add(parameters[1]);
-                        parameters[2] = new SqlParameter("@copies", addMoviePopup.GetMovieCopies());
-                        cmd.Parameters.Add(parameters[2]);
+               try
+               {
+                    SqlParameter[] parameters = new SqlParameter[3];
+                    parameters[0] = new SqlParameter("@title", TI.ToTitleCase(addMoviePopup.GetMovieTitle()));
+                    cmd.Parameters.Add(parameters[0]);
+                    parameters[1] = new SqlParameter("@genre", addMoviePopup.GetMovieGenre());
+                    cmd.Parameters.Add(parameters[1]);
+                    parameters[2] = new SqlParameter("@copies", addMoviePopup.GetMovieCopies());
+                    cmd.Parameters.Add(parameters[2]);
 
-                        cmd.ExecuteNonQuery();
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString(), "ERROR");
-                    }
+                    cmd.ExecuteNonQuery();
+                    LoadMovieData();
+               }
+               catch (Exception ex)
+               {
+                    MessageBox.Show(ex.ToString(), "ERROR");
+               }
                 }
-            }
             else if (result == DialogResult.Cancel)
             {
                 addMoviePopup.Dispose();
+            }
+        }
+
+        private void deleteMovieButton_Click(object sender, EventArgs e)
+        {
+            cmd.CommandText = "DELETE FROM movies WHERE id = @id";
+
+            try
+            {
+                ListViewItem item = moviesListView.SelectedItems[0];
+                int itemId = Int32.Parse(item.SubItems[0].Text);
+                string title = item.SubItems[1].Text;
+                SqlParameter id = new SqlParameter("@id", itemId);
+                cmd.Parameters.Add(id);
+                cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+
+                LoadMovieData();
+                MessageBox.Show("Deleted movie with ID " + itemId + " (" + title + ") from the database.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERROR");
             }
         }
     }

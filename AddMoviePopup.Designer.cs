@@ -118,6 +118,7 @@ namespace CMPT_291_Project
             this.addMoviePopupAddBtn.TabIndex = 6;
             this.addMoviePopupAddBtn.Text = "Add movie";
             this.addMoviePopupAddBtn.UseVisualStyleBackColor = true;
+            this.addMoviePopupAddBtn.Click += new System.EventHandler(this.addMoviePopupAddBtn_Click);
             // 
             // addMoviePopupCancelBtn
             // 

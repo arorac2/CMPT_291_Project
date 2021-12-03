@@ -12,9 +12,12 @@ namespace CMPT_291_Project
 {
     public partial class AddMoviePopup : Form
     {
-        public AddMoviePopup()
+        public MovieManagement mm;
+
+        public AddMoviePopup(MovieManagement mm)
         {
             InitializeComponent();
+            this.mm = mm;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,7 +31,7 @@ namespace CMPT_291_Project
             return addMovieTitleTextbox.Text != null && addMovieGenreDropdown.SelectedIndex != -1 && addMovieCopiesInput.Value >= 0;
         }
 
-        public void RaiseFieldsNotValidError()
+        public void ShowErrorLabel()
         {
             addMoviePopupStatusLabel.Text = "Please ensure all fields have been filled";
         }
@@ -51,6 +54,15 @@ namespace CMPT_291_Project
         private void AddMoviePopup_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void addMoviePopupAddBtn_Click(object sender, EventArgs e)
+        {
+            if (!AllFieldsFilled())
+            {
+                this.DialogResult = DialogResult.None;
+                ShowErrorLabel();
+            }
         }
     }
 }

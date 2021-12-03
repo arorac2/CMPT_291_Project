@@ -98,6 +98,7 @@ namespace CMPT_291_Project
             this.deleteMovieButton.TabIndex = 2;
             this.deleteMovieButton.Text = "➖";
             this.deleteMovieButton.UseVisualStyleBackColor = true;
+            this.deleteMovieButton.Click += new System.EventHandler(this.deleteMovieButton_Click);
             // 
             // MovieManagement
             // 
