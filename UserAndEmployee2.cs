@@ -32,7 +32,7 @@ namespace CMPT_291_Project
             userDropdown.Items.Add("Show users with");
 
 
-            String connectionString = "Server = PLEASEDONTHACKM; Database = MovieRental; Trusted_Connection = yes;";
+            String connectionString = "Server = DESKTOP-1JJOH8H; Database = MovieRental; Trusted_Connection = yes;";
 
 
             /* Starting the connection */
@@ -1333,6 +1333,13 @@ namespace CMPT_291_Project
             empState.Text = "";
             empZip.Text = "";
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdvancedStatistics stats = new AdvancedStatistics();
+            stats.Show();
         }
         /*
 private void selsectEmployee_Click(object sender, EventArgs e)
