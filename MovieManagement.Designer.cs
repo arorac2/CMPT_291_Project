@@ -36,6 +36,7 @@ namespace CMPT_291_Project
             this.movieCopiesHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.addMovieBtn = new System.Windows.Forms.Button();
             this.deleteMovieButton = new System.Windows.Forms.Button();
+            this.editMovieButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // moviesListView
@@ -100,11 +101,23 @@ namespace CMPT_291_Project
             this.deleteMovieButton.UseVisualStyleBackColor = true;
             this.deleteMovieButton.Click += new System.EventHandler(this.deleteMovieButton_Click);
             // 
+            // editMovieButton
+            // 
+            this.editMovieButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editMovieButton.Location = new System.Drawing.Point(48, 656);
+            this.editMovieButton.Name = "editMovieButton";
+            this.editMovieButton.Size = new System.Drawing.Size(124, 35);
+            this.editMovieButton.TabIndex = 3;
+            this.editMovieButton.Text = "Edit";
+            this.editMovieButton.UseVisualStyleBackColor = true;
+            this.editMovieButton.Click += new System.EventHandler(this.editMovieButton_Click);
+            // 
             // MovieManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 779);
+            this.Controls.Add(this.editMovieButton);
             this.Controls.Add(this.deleteMovieButton);
             this.Controls.Add(this.addMovieBtn);
             this.Controls.Add(this.moviesListView);
@@ -124,5 +137,6 @@ namespace CMPT_291_Project
         private System.Windows.Forms.ColumnHeader movieCopiesHeader;
         private System.Windows.Forms.Button addMovieBtn;
         private System.Windows.Forms.Button deleteMovieButton;
+        private System.Windows.Forms.Button editMovieButton;
     }
 }
