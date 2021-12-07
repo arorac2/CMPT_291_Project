@@ -1,7 +1,7 @@
 ﻿
 namespace CMPT_291_Project
 {
-    partial class UserSettings2
+    partial class UserSettings
     {
         /// <summary>
         /// Required designer variable.
@@ -33,17 +33,17 @@ namespace CMPT_291_Project
             this.myActivityLabel = new System.Windows.Forms.Label();
             this.recentActivityControl = new System.Windows.Forms.TabControl();
             this.recentlyWatchedTab = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.recentlyWatchedListView = new System.Windows.Forms.ListView();
             this.watchedDateViewedColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.watchedMovieColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.watchedUserRatingHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.watchedAvgUserRatingHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.movieRatingsTab = new System.Windows.Forms.TabPage();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.movieRatingsListView = new System.Windows.Forms.ListView();
             this.movieRatingTitleHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.movieRatingRatingHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.actorRatingsTab = new System.Windows.Forms.TabPage();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.actorRatingsListView = new System.Windows.Forms.ListView();
             this.actorRatingActorHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.actorRatingRatingHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.paymentSectionLabel = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@ namespace CMPT_291_Project
             // 
             // recentlyWatchedTab
             // 
-            this.recentlyWatchedTab.Controls.Add(this.listView1);
+            this.recentlyWatchedTab.Controls.Add(this.recentlyWatchedListView);
             this.recentlyWatchedTab.Location = new System.Drawing.Point(4, 33);
             this.recentlyWatchedTab.Name = "recentlyWatchedTab";
             this.recentlyWatchedTab.Padding = new System.Windows.Forms.Padding(3);
@@ -119,22 +119,22 @@ namespace CMPT_291_Project
             this.recentlyWatchedTab.Text = "Recently Watched";
             this.recentlyWatchedTab.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // recentlyWatchedListView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.watchedDateViewedColumn,
+            this.recentlyWatchedListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.watchedMovieColumn,
+            this.watchedDateViewedColumn,
             this.watchedUserRatingHeader,
             this.watchedAvgUserRatingHeader});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(492, 230);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.recentlyWatchedListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.recentlyWatchedListView.HideSelection = false;
+            this.recentlyWatchedListView.Location = new System.Drawing.Point(3, 3);
+            this.recentlyWatchedListView.Name = "recentlyWatchedListView";
+            this.recentlyWatchedListView.Size = new System.Drawing.Size(492, 230);
+            this.recentlyWatchedListView.TabIndex = 0;
+            this.recentlyWatchedListView.UseCompatibleStateImageBehavior = false;
+            this.recentlyWatchedListView.View = System.Windows.Forms.View.Details;
+            this.recentlyWatchedListView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // watchedDateViewedColumn
             // 
@@ -158,7 +158,7 @@ namespace CMPT_291_Project
             // 
             // movieRatingsTab
             // 
-            this.movieRatingsTab.Controls.Add(this.listView2);
+            this.movieRatingsTab.Controls.Add(this.movieRatingsListView);
             this.movieRatingsTab.Location = new System.Drawing.Point(4, 33);
             this.movieRatingsTab.Name = "movieRatingsTab";
             this.movieRatingsTab.Padding = new System.Windows.Forms.Padding(3);
@@ -167,19 +167,20 @@ namespace CMPT_291_Project
             this.movieRatingsTab.Text = "My Movie Ratings";
             this.movieRatingsTab.UseVisualStyleBackColor = true;
             // 
-            // listView2
+            // movieRatingsListView
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.movieRatingsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.movieRatingTitleHeader,
             this.movieRatingRatingHeader});
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(3, 3);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(492, 230);
-            this.listView2.TabIndex = 11;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.movieRatingsListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.movieRatingsListView.HideSelection = false;
+            this.movieRatingsListView.Location = new System.Drawing.Point(3, 3);
+            this.movieRatingsListView.Name = "movieRatingsListView";
+            this.movieRatingsListView.Size = new System.Drawing.Size(492, 230);
+            this.movieRatingsListView.TabIndex = 11;
+            this.movieRatingsListView.UseCompatibleStateImageBehavior = false;
+            this.movieRatingsListView.View = System.Windows.Forms.View.Details;
+            this.movieRatingsListView.SelectedIndexChanged += new System.EventHandler(this.myRatingsListView_SelectedIndexChanged);
             // 
             // movieRatingTitleHeader
             // 
@@ -193,7 +194,7 @@ namespace CMPT_291_Project
             // 
             // actorRatingsTab
             // 
-            this.actorRatingsTab.Controls.Add(this.listView3);
+            this.actorRatingsTab.Controls.Add(this.actorRatingsListView);
             this.actorRatingsTab.Location = new System.Drawing.Point(4, 33);
             this.actorRatingsTab.Name = "actorRatingsTab";
             this.actorRatingsTab.Padding = new System.Windows.Forms.Padding(3);
@@ -202,19 +203,19 @@ namespace CMPT_291_Project
             this.actorRatingsTab.Text = "My Actor Ratings";
             this.actorRatingsTab.UseVisualStyleBackColor = true;
             // 
-            // listView3
+            // actorRatingsListView
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.actorRatingsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.actorRatingActorHeader,
             this.actorRatingRatingHeader});
-            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(3, 3);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(492, 230);
-            this.listView3.TabIndex = 11;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.actorRatingsListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.actorRatingsListView.HideSelection = false;
+            this.actorRatingsListView.Location = new System.Drawing.Point(3, 3);
+            this.actorRatingsListView.Name = "actorRatingsListView";
+            this.actorRatingsListView.Size = new System.Drawing.Size(492, 230);
+            this.actorRatingsListView.TabIndex = 11;
+            this.actorRatingsListView.UseCompatibleStateImageBehavior = false;
+            this.actorRatingsListView.View = System.Windows.Forms.View.Details;
             // 
             // actorRatingActorHeader
             // 
@@ -437,12 +438,12 @@ namespace CMPT_291_Project
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // UserSettings2
+            // UserSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1025, 601);
+            this.ClientSize = new System.Drawing.Size(1042, 601);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.phoneNumberTextBox);
             this.Controls.Add(this.phoneLabel);
@@ -469,7 +470,7 @@ namespace CMPT_291_Project
             this.Controls.Add(this.recentActivityControl);
             this.Controls.Add(this.myActivityLabel);
             this.Controls.Add(this.settingsLabel);
-            this.Name = "UserSettings2";
+            this.Name = "UserSettings";
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.UserSettings2_Load);
             this.recentActivityControl.ResumeLayout(false);
@@ -486,7 +487,7 @@ namespace CMPT_291_Project
         private System.Windows.Forms.Label myActivityLabel;
         private System.Windows.Forms.TabControl recentActivityControl;
         private System.Windows.Forms.TabPage recentlyWatchedTab;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView recentlyWatchedListView;
         private System.Windows.Forms.ColumnHeader watchedMovieColumn;
         private System.Windows.Forms.ColumnHeader watchedDateViewedColumn;
         private System.Windows.Forms.ColumnHeader watchedUserRatingHeader;
@@ -494,10 +495,10 @@ namespace CMPT_291_Project
         private System.Windows.Forms.TabPage movieRatingsTab;
         private System.Windows.Forms.TabPage actorRatingsTab;
         private System.Windows.Forms.Label paymentSectionLabel;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView movieRatingsListView;
         private System.Windows.Forms.ColumnHeader movieRatingTitleHeader;
         private System.Windows.Forms.ColumnHeader movieRatingRatingHeader;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView actorRatingsListView;
         private System.Windows.Forms.ColumnHeader actorRatingActorHeader;
         private System.Windows.Forms.ColumnHeader actorRatingRatingHeader;
         private System.Windows.Forms.Label firstNameLabel;

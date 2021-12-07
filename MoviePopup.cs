@@ -10,14 +10,12 @@ using System.Windows.Forms;
 
 namespace CMPT_291_Project
 {
-    public partial class AddMoviePopup : Form
+    public partial class MoviePopup : Form
     {
-        public MovieManagement mm;
 
-        public AddMoviePopup(MovieManagement mm)
+        public MoviePopup()
         {
             InitializeComponent();
-            this.mm = mm;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -54,6 +52,21 @@ namespace CMPT_291_Project
         private void AddMoviePopup_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void SetMovieTitle(string title)
+        {
+            addMovieTitleTextbox.Text = title;
+        }
+
+        public void SetMovieGenre(string genre)
+        {
+            addMovieGenreDropdown.SelectedItem = genre;
+        }
+
+        public void SetMovieCopies(int copies)
+        {
+            addMovieCopiesInput.Value = copies;
         }
 
         private void addMoviePopupAddBtn_Click(object sender, EventArgs e)
