@@ -133,16 +133,12 @@ namespace CMPT_291_Project
             {
                try
                {
-                    cmd.Parameters.Clear();
-                    SqlParameter[] parameters = new SqlParameter[3];
-                    parameters[0] = new SqlParameter("@title", TI.ToTitleCase(addMoviePopup.GetMovieTitle()));
-                    cmd.Parameters.Add(parameters[0]);
-                    parameters[1] = new SqlParameter("@genre", addMoviePopup.GetMovieGenre());
-                    cmd.Parameters.Add(parameters[1]);
-                    parameters[2] = new SqlParameter("copies", addMoviePopup.GetMovieCopies());
-                    cmd.Parameters.Add(parameters[2]);
-
+                    cmd.Parameters.Add(new SqlParameter("@title", TI.ToTitleCase(addMoviePopup.GetMovieTitle())));
+                    cmd.Parameters.Add(new SqlParameter("@genre", addMoviePopup.GetMovieGenre()));
+                    cmd.Parameters.Add(new SqlParameter("@copies", addMoviePopup.GetMovieCopies()));
                     cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+
                     LoadMovieData();
                }
                catch (Exception ex)
@@ -172,6 +168,47 @@ namespace CMPT_291_Project
 
                 LoadMovieData();
                 MessageBox.Show("Deleted movie with ID " + itemId + " (" + title + ") from the database.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERROR");
+            }
+        }
+
+        private void editMovieButton_Click(object sender, EventArgs e)
+        {
+            cmd.CommandText = "UPDATE movies SET title = @title, genre = @genre, copies_in_stock = @copies WHERE id = @id";
+
+            try
+            {
+                // listview row data
+                ListViewItem item = moviesListView.SelectedItems[0];
+                int itemId = Int32.Parse(item.SubItems[0].Text);
+                string genre = item.SubItems[2].Text;
+                string title = item.SubItems[1].Text;
+                int copies = Int32.Parse(item.SubItems[3].Text);
+
+                // prepopulate movie popup with values pulled from db
+                MoviePopup editMoviePopup = new MoviePopup();
+                editMoviePopup.SetMovieTitle(title);
+                editMoviePopup.SetMovieGenre(genre);
+                editMoviePopup.SetMovieCopies(copies);
+
+                DialogResult result = editMoviePopup.ShowDialog();
+                editMoviePopup.Text = "Edit a Movie";
+
+                if (result == DialogResult.OK)
+                {
+                    cmd.Parameters.Add(new SqlParameter("@title", TI.ToTitleCase(editMoviePopup.GetMovieTitle())));
+                    cmd.Parameters.Add(new SqlParameter("@genre", editMoviePopup.GetMovieGenre()));
+                    cmd.Parameters.Add(new SqlParameter("@copies", editMoviePopup.GetMovieCopies()));
+                    cmd.Parameters.Add(new SqlParameter("@id", itemId));
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+
+                    LoadMovieData();
+                    MessageBox.Show("Updated movie with ID " + itemId + " (" + title + ").");
+                }
             }
             catch (Exception ex)
             {

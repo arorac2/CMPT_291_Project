@@ -110,6 +110,17 @@ namespace CMPT_291_Project
             this.editMovieButton.TabIndex = 3;
             this.editMovieButton.Text = "Edit";
             this.editMovieButton.UseVisualStyleBackColor = true;
+            this.editMovieButton.Click += new System.EventHandler(this.editMovieButton_Click);
+            // 
+            // editMovieButton
+            // 
+            this.editMovieButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editMovieButton.Location = new System.Drawing.Point(48, 656);
+            this.editMovieButton.Name = "editMovieButton";
+            this.editMovieButton.Size = new System.Drawing.Size(124, 35);
+            this.editMovieButton.TabIndex = 3;
+            this.editMovieButton.Text = "Edit";
+            this.editMovieButton.UseVisualStyleBackColor = true;
             //this.editMovieButton.Click += new System.EventHandler(this.editMovieButton_Click);
             // 
             // MovieManagement

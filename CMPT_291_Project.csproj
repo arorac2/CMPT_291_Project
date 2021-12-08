@@ -59,12 +59,6 @@
     <Compile Include="MoviePopup.Designer.cs">
       <DependentUpon>MoviePopup.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdvancedStatistics.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdvancedStatistics.Designer.cs">
-      <DependentUpon>AdvancedStatistics.cs</DependentUpon>
-    </Compile>
     <Compile Include="MovieManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,7 +85,7 @@
     <Compile Include="UserAndEmployee2.designer.cs">
       <DependentUpon>UserAndEmployee2.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserSettings.cs">
+    <Compile Include="UserSettings2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserSettings.designer.cs">

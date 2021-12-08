@@ -31,8 +31,13 @@ namespace CMPT_291_Project
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAndEmployee2));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EmployeeUI = new System.Windows.Forms.Button();
             this.CustomerUI = new System.Windows.Forms.Button();
             this.EmployeeControls = new System.Windows.Forms.TabControl();
@@ -73,7 +78,6 @@ namespace CMPT_291_Project
             this.userZipEmp = new System.Windows.Forms.Label();
             this.userStateEmp = new System.Windows.Forms.Label();
             this.userCityEmp = new System.Windows.Forms.Label();
-            this.userEmailEmp = new System.Windows.Forms.Label();
             this.userAddressEmp = new System.Windows.Forms.Label();
             this.userDateEmp = new System.Windows.Forms.Label();
             this.userPlanEmp = new System.Windows.Forms.Label();
@@ -83,7 +87,6 @@ namespace CMPT_291_Project
             this.userActivityEmp = new System.Windows.Forms.ProgressBar();
             this.userPicEmp = new System.Windows.Forms.PictureBox();
             this.cancel = new System.Windows.Forms.Button();
-            this.selectUserEmp = new System.Windows.Forms.Button();
             this.empBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,8 +98,6 @@ namespace CMPT_291_Project
             this.value = new System.Windows.Forms.TextBox();
             this.search = new System.Windows.Forms.Button();
             this.dropDown = new System.Windows.Forms.ComboBox();
-            this.employeeListLabel = new System.Windows.Forms.Label();
-            this.changeUserTypeMang = new System.Windows.Forms.Button();
             this.PhoneNoBox = new System.Windows.Forms.TextBox();
             this.HourlyRateBox = new System.Windows.Forms.TextBox();
             this.AddressBox = new System.Windows.Forms.TextBox();
@@ -115,20 +116,19 @@ namespace CMPT_291_Project
             this.StartDate = new System.Windows.Forms.Label();
             this.PhoneNo = new System.Windows.Forms.Label();
             this.SIN = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.zipLabel = new System.Windows.Forms.Label();
+            this.stateLabel = new System.Windows.Forms.Label();
+            this.cityLabel = new System.Windows.Forms.Label();
+            this.rateLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.dateLabel = new System.Windows.Forms.Label();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.ssnLabel = new System.Windows.Forms.Label();
+            this.empName = new System.Windows.Forms.Label();
             this.EmployeeAdd = new System.Windows.Forms.Button();
             this.EmployeePic = new System.Windows.Forms.PictureBox();
             this.CancelAdd = new System.Windows.Forms.Button();
-            this.selsectEmployee = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.empBackButton = new System.Windows.Forms.Button();
             this.EmpFirstName = new System.Windows.Forms.Label();
             this.EmpFirstNameBox = new System.Windows.Forms.TextBox();
             this.EmpLastNameBox = new System.Windows.Forms.TextBox();
@@ -239,12 +239,25 @@ namespace CMPT_291_Project
             // 
             // ManageUser
             // 
+            this.ManageUser.Controls.Add(this.button2);
+            this.ManageUser.Controls.Add(this.editDeleteMsg);
+            this.ManageUser.Controls.Add(this.changeLast);
+            this.ManageUser.Controls.Add(this.doneEdit);
+            this.ManageUser.Controls.Add(this.deleteUser);
+            this.ManageUser.Controls.Add(this.editUser);
+            this.ManageUser.Controls.Add(this.userCred);
+            this.ManageUser.Controls.Add(this.userPhone);
+            this.ManageUser.Controls.Add(this.userZip);
+            this.ManageUser.Controls.Add(this.userState);
+            this.ManageUser.Controls.Add(this.userCity);
+            this.ManageUser.Controls.Add(this.userAddress);
+            this.ManageUser.Controls.Add(this.userDate);
+            this.ManageUser.Controls.Add(this.userPlan);
+            this.ManageUser.Controls.Add(this.userAcctNo);
             this.ManageUser.Controls.Add(this.addUserMessage);
-            this.ManageUser.Controls.Add(this.textBox1);
-            this.ManageUser.Controls.Add(this.button1);
-            this.ManageUser.Controls.Add(this.comboBox1);
-            this.ManageUser.Controls.Add(this.userListLabel1);
-            this.ManageUser.Controls.Add(this.userTypeEmp);
+            this.ManageUser.Controls.Add(this.userSearchBox);
+            this.ManageUser.Controls.Add(this.searchBar);
+            this.ManageUser.Controls.Add(this.userDropdown);
             this.ManageUser.Controls.Add(this.getCred);
             this.ManageUser.Controls.Add(this.getPlan);
             this.ManageUser.Controls.Add(this.getEmail);
@@ -275,17 +288,14 @@ namespace CMPT_291_Project
             this.ManageUser.Controls.Add(this.userZipEmp);
             this.ManageUser.Controls.Add(this.userStateEmp);
             this.ManageUser.Controls.Add(this.userCityEmp);
-            this.ManageUser.Controls.Add(this.userEmailEmp);
             this.ManageUser.Controls.Add(this.userAddressEmp);
             this.ManageUser.Controls.Add(this.userDateEmp);
             this.ManageUser.Controls.Add(this.userPlanEmp);
             this.ManageUser.Controls.Add(this.userAcctNoEmp);
-            this.ManageUser.Controls.Add(this.userNameEmp);
             this.ManageUser.Controls.Add(this.addUserEmp1);
             this.ManageUser.Controls.Add(this.userActivityEmp);
             this.ManageUser.Controls.Add(this.userPicEmp);
             this.ManageUser.Controls.Add(this.cancel);
-            this.ManageUser.Controls.Add(this.selectUserEmp);
             this.ManageUser.Controls.Add(this.empBack);
             this.ManageUser.Controls.Add(this.dataGridView1);
             this.ManageUser.Location = new System.Drawing.Point(4, 40);
@@ -344,7 +354,7 @@ namespace CMPT_291_Project
             this.userListLabel1.TabIndex = 146;
             this.userListLabel1.Text = "User List";
             // 
-            // userTypeEmp
+            // changeLast
             // 
             this.userTypeEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userTypeEmp.Location = new System.Drawing.Point(861, 23);
@@ -354,6 +364,187 @@ namespace CMPT_291_Project
             this.userTypeEmp.Text = "Change User Type";
             this.userTypeEmp.UseVisualStyleBackColor = true;
             this.userTypeEmp.Click += new System.EventHandler(this.userTypeEmp_Click);
+            // 
+            // doneEdit
+            // 
+            this.doneEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.doneEdit.Location = new System.Drawing.Point(759, 386);
+            this.doneEdit.Name = "doneEdit";
+            this.doneEdit.Size = new System.Drawing.Size(61, 28);
+            this.doneEdit.TabIndex = 283;
+            this.doneEdit.Text = "Done";
+            this.doneEdit.UseVisualStyleBackColor = true;
+            this.doneEdit.Visible = false;
+            this.doneEdit.Click += new System.EventHandler(this.doneEdit_Click);
+            // 
+            // deleteUser
+            // 
+            this.deleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteUser.Location = new System.Drawing.Point(909, 195);
+            this.deleteUser.Name = "deleteUser";
+            this.deleteUser.Size = new System.Drawing.Size(59, 28);
+            this.deleteUser.TabIndex = 281;
+            this.deleteUser.Text = "Delete";
+            this.deleteUser.UseVisualStyleBackColor = true;
+            this.deleteUser.Visible = false;
+            this.deleteUser.Click += new System.EventHandler(this.deleteUser_Click);
+            // 
+            // editUser
+            // 
+            this.editUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editUser.Location = new System.Drawing.Point(848, 195);
+            this.editUser.Name = "editUser";
+            this.editUser.Size = new System.Drawing.Size(55, 28);
+            this.editUser.TabIndex = 282;
+            this.editUser.Text = "Edit";
+            this.editUser.UseVisualStyleBackColor = true;
+            this.editUser.Visible = false;
+            this.editUser.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // userCred
+            // 
+            this.userCred.AutoSize = true;
+            this.userCred.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.userCred.Location = new System.Drawing.Point(639, 360);
+            this.userCred.Name = "userCred";
+            this.userCred.Size = new System.Drawing.Size(95, 20);
+            this.userCred.TabIndex = 268;
+            this.userCred.Text = "Cred. No: ";
+            this.userCred.Visible = false;
+            this.userCred.Click += new System.EventHandler(this.userCred_Click);
+            // 
+            // userPhone
+            // 
+            this.userPhone.AutoSize = true;
+            this.userPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.userPhone.Location = new System.Drawing.Point(639, 327);
+            this.userPhone.Name = "userPhone";
+            this.userPhone.Size = new System.Drawing.Size(96, 20);
+            this.userPhone.TabIndex = 267;
+            this.userPhone.Text = "Phone No:";
+            this.userPhone.Visible = false;
+            this.userPhone.Click += new System.EventHandler(this.userPhone_Click);
+            // 
+            // userZip
+            // 
+            this.userZip.AutoSize = true;
+            this.userZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.userZip.Location = new System.Drawing.Point(639, 294);
+            this.userZip.Name = "userZip";
+            this.userZip.Size = new System.Drawing.Size(89, 20);
+            this.userZip.TabIndex = 266;
+            this.userZip.Text = "Zip Code:";
+            this.userZip.Visible = false;
+            this.userZip.Click += new System.EventHandler(this.userZip_Click);
+            // 
+            // userState
+            // 
+            this.userState.AutoSize = true;
+            this.userState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.userState.Location = new System.Drawing.Point(639, 261);
+            this.userState.Name = "userState";
+            this.userState.Size = new System.Drawing.Size(59, 20);
+            this.userState.TabIndex = 265;
+            this.userState.Text = "State:";
+            this.userState.Visible = false;
+            this.userState.Click += new System.EventHandler(this.userState_Click);
+            // 
+            // userCity
+            // 
+            this.userCity.AutoSize = true;
+            this.userCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.userCity.Location = new System.Drawing.Point(639, 228);
+            this.userCity.Name = "userCity";
+            this.userCity.Size = new System.Drawing.Size(48, 20);
+            this.userCity.TabIndex = 264;
+            this.userCity.Text = "City:";
+            this.userCity.Visible = false;
+            this.userCity.Click += new System.EventHandler(this.userCity_Click);
+            // 
+            // userAddress
+            // 
+            this.userAddress.AutoSize = true;
+            this.userAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.userAddress.Location = new System.Drawing.Point(639, 195);
+            this.userAddress.Name = "userAddress";
+            this.userAddress.Size = new System.Drawing.Size(84, 20);
+            this.userAddress.TabIndex = 262;
+            this.userAddress.Text = "Address:";
+            this.userAddress.Visible = false;
+            this.userAddress.Click += new System.EventHandler(this.userAddress_Click);
+            // 
+            // userDate
+            // 
+            this.userDate.AutoSize = true;
+            this.userDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.userDate.Location = new System.Drawing.Point(639, 161);
+            this.userDate.Name = "userDate";
+            this.userDate.Size = new System.Drawing.Size(127, 20);
+            this.userDate.TabIndex = 261;
+            this.userDate.Text = "Date Created:";
+            this.userDate.Visible = false;
+            // 
+            // userPlan
+            // 
+            this.userPlan.AutoSize = true;
+            this.userPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.userPlan.Location = new System.Drawing.Point(639, 128);
+            this.userPlan.Name = "userPlan";
+            this.userPlan.Size = new System.Drawing.Size(52, 20);
+            this.userPlan.TabIndex = 260;
+            this.userPlan.Text = "Plan:";
+            this.userPlan.Visible = false;
+            // 
+            // userAcctNo
+            // 
+            this.userAcctNo.AutoSize = true;
+            this.userAcctNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.userAcctNo.Location = new System.Drawing.Point(639, 95);
+            this.userAcctNo.Name = "userAcctNo";
+            this.userAcctNo.Size = new System.Drawing.Size(87, 20);
+            this.userAcctNo.TabIndex = 259;
+            this.userAcctNo.Text = "Acct. No:";
+            this.userAcctNo.Visible = false;
+            this.userAcctNo.Click += new System.EventHandler(this.userAcctNo_Click);
+            // 
+            // addUserMessage
+            // 
+            this.addUserMessage.AutoSize = true;
+            this.addUserMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addUserMessage.Location = new System.Drawing.Point(249, 377);
+            this.addUserMessage.Name = "addUserMessage";
+            this.addUserMessage.Size = new System.Drawing.Size(50, 13);
+            this.addUserMessage.TabIndex = 258;
+            this.addUserMessage.Text = "Message";
+            this.addUserMessage.Visible = false;
+            // 
+            // userSearchBox
+            // 
+            this.userSearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userSearchBox.Location = new System.Drawing.Point(260, 476);
+            this.userSearchBox.Name = "userSearchBox";
+            this.userSearchBox.Size = new System.Drawing.Size(91, 26);
+            this.userSearchBox.TabIndex = 257;
+            // 
+            // searchBar
+            // 
+            this.searchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBar.Location = new System.Drawing.Point(360, 476);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(71, 28);
+            this.searchBar.TabIndex = 256;
+            this.searchBar.Text = "Search";
+            this.searchBar.UseVisualStyleBackColor = true;
+            this.searchBar.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // userDropdown
+            // 
+            this.userDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userDropdown.FormattingEnabled = true;
+            this.userDropdown.Location = new System.Drawing.Point(16, 476);
+            this.userDropdown.Name = "userDropdown";
+            this.userDropdown.Size = new System.Drawing.Size(238, 28);
+            this.userDropdown.TabIndex = 255;
             // 
             // getCred
             // 
@@ -612,51 +803,55 @@ namespace CMPT_291_Project
             // 
             this.userCredEmp.AutoSize = true;
             this.userCredEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.userCredEmp.Location = new System.Drawing.Point(509, 392);
+            this.userCredEmp.Location = new System.Drawing.Point(499, 360);
             this.userCredEmp.Name = "userCredEmp";
             this.userCredEmp.Size = new System.Drawing.Size(95, 20);
             this.userCredEmp.TabIndex = 157;
             this.userCredEmp.Text = "Cred. No: ";
             this.userCredEmp.Visible = false;
+            this.userCredEmp.Click += new System.EventHandler(this.userCredEmp_Click);
             // 
             // userPhoneEmp
             // 
             this.userPhoneEmp.AutoSize = true;
             this.userPhoneEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.userPhoneEmp.Location = new System.Drawing.Point(509, 359);
+            this.userPhoneEmp.Location = new System.Drawing.Point(499, 327);
             this.userPhoneEmp.Name = "userPhoneEmp";
             this.userPhoneEmp.Size = new System.Drawing.Size(96, 20);
             this.userPhoneEmp.TabIndex = 156;
             this.userPhoneEmp.Text = "Phone No:";
             this.userPhoneEmp.Visible = false;
+            this.userPhoneEmp.Click += new System.EventHandler(this.userPhoneEmp_Click);
             // 
             // userZipEmp
             // 
             this.userZipEmp.AutoSize = true;
             this.userZipEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.userZipEmp.Location = new System.Drawing.Point(509, 326);
+            this.userZipEmp.Location = new System.Drawing.Point(499, 294);
             this.userZipEmp.Name = "userZipEmp";
             this.userZipEmp.Size = new System.Drawing.Size(89, 20);
             this.userZipEmp.TabIndex = 155;
             this.userZipEmp.Text = "Zip Code:";
             this.userZipEmp.Visible = false;
+            this.userZipEmp.Click += new System.EventHandler(this.userZipEmp_Click);
             // 
             // userStateEmp
             // 
             this.userStateEmp.AutoSize = true;
             this.userStateEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.userStateEmp.Location = new System.Drawing.Point(509, 293);
+            this.userStateEmp.Location = new System.Drawing.Point(499, 261);
             this.userStateEmp.Name = "userStateEmp";
             this.userStateEmp.Size = new System.Drawing.Size(59, 20);
             this.userStateEmp.TabIndex = 154;
             this.userStateEmp.Text = "State:";
             this.userStateEmp.Visible = false;
+            this.userStateEmp.Click += new System.EventHandler(this.userStateEmp_Click);
             // 
             // userCityEmp
             // 
             this.userCityEmp.AutoSize = true;
             this.userCityEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.userCityEmp.Location = new System.Drawing.Point(509, 260);
+            this.userCityEmp.Location = new System.Drawing.Point(499, 228);
             this.userCityEmp.Name = "userCityEmp";
             this.userCityEmp.Size = new System.Drawing.Size(48, 20);
             this.userCityEmp.TabIndex = 153;
@@ -684,6 +879,7 @@ namespace CMPT_291_Project
             this.userAddressEmp.TabIndex = 151;
             this.userAddressEmp.Text = "Address:";
             this.userAddressEmp.Visible = false;
+            this.userAddressEmp.Click += new System.EventHandler(this.userAddressEmp_Click);
             // 
             // userDateEmp
             // 
@@ -841,12 +1037,31 @@ namespace CMPT_291_Project
             // 
             // ManageEmployees
             // 
+            this.ManageEmployees.Controls.Add(this.editDeleteEmpMsg);
+            this.ManageEmployees.Controls.Add(this.changeEmpSur);
+            this.ManageEmployees.Controls.Add(this.doneEditEmp);
+            this.ManageEmployees.Controls.Add(this.deleteEmp);
+            this.ManageEmployees.Controls.Add(this.editEmp);
+            this.ManageEmployees.Controls.Add(this.empZip);
+            this.ManageEmployees.Controls.Add(this.empState);
+            this.ManageEmployees.Controls.Add(this.empCity);
+            this.ManageEmployees.Controls.Add(this.empAddress);
+            this.ManageEmployees.Controls.Add(this.empRate);
+            this.ManageEmployees.Controls.Add(this.empDate);
+            this.ManageEmployees.Controls.Add(this.empPhone);
+            this.ManageEmployees.Controls.Add(this.empSSN);
+            this.ManageEmployees.Controls.Add(this.changeEmpPhone);
+            this.ManageEmployees.Controls.Add(this.changeEmpDate);
+            this.ManageEmployees.Controls.Add(this.changeEmpRate);
+            this.ManageEmployees.Controls.Add(this.changeEmpAddress);
+            this.ManageEmployees.Controls.Add(this.changeEmpCity);
+            this.ManageEmployees.Controls.Add(this.changeEmpState);
+            this.ManageEmployees.Controls.Add(this.changeEmpZip);
+            this.ManageEmployees.Controls.Add(this.changeEmpFirst);
             this.ManageEmployees.Controls.Add(this.addEmpMsg);
             this.ManageEmployees.Controls.Add(this.value);
             this.ManageEmployees.Controls.Add(this.search);
             this.ManageEmployees.Controls.Add(this.dropDown);
-            this.ManageEmployees.Controls.Add(this.employeeListLabel);
-            this.ManageEmployees.Controls.Add(this.changeUserTypeMang);
             this.ManageEmployees.Controls.Add(this.PhoneNoBox);
             this.ManageEmployees.Controls.Add(this.HourlyRateBox);
             this.ManageEmployees.Controls.Add(this.AddressBox);
@@ -865,24 +1080,24 @@ namespace CMPT_291_Project
             this.ManageEmployees.Controls.Add(this.StartDate);
             this.ManageEmployees.Controls.Add(this.PhoneNo);
             this.ManageEmployees.Controls.Add(this.SIN);
-            this.ManageEmployees.Controls.Add(this.label17);
-            this.ManageEmployees.Controls.Add(this.label18);
-            this.ManageEmployees.Controls.Add(this.label19);
-            this.ManageEmployees.Controls.Add(this.label20);
-            this.ManageEmployees.Controls.Add(this.label21);
-            this.ManageEmployees.Controls.Add(this.label22);
-            this.ManageEmployees.Controls.Add(this.label23);
-            this.ManageEmployees.Controls.Add(this.label24);
-            this.ManageEmployees.Controls.Add(this.label25);
+            this.ManageEmployees.Controls.Add(this.zipLabel);
+            this.ManageEmployees.Controls.Add(this.stateLabel);
+            this.ManageEmployees.Controls.Add(this.cityLabel);
+            this.ManageEmployees.Controls.Add(this.rateLabel);
+            this.ManageEmployees.Controls.Add(this.addressLabel);
+            this.ManageEmployees.Controls.Add(this.dateLabel);
+            this.ManageEmployees.Controls.Add(this.phoneLabel);
+            this.ManageEmployees.Controls.Add(this.ssnLabel);
+            this.ManageEmployees.Controls.Add(this.empName);
             this.ManageEmployees.Controls.Add(this.EmployeeAdd);
             this.ManageEmployees.Controls.Add(this.EmployeePic);
             this.ManageEmployees.Controls.Add(this.CancelAdd);
-            this.ManageEmployees.Controls.Add(this.selsectEmployee);
-            this.ManageEmployees.Controls.Add(this.button8);
+            this.ManageEmployees.Controls.Add(this.empBackButton);
             this.ManageEmployees.Controls.Add(this.EmpFirstName);
             this.ManageEmployees.Controls.Add(this.EmpFirstNameBox);
             this.ManageEmployees.Controls.Add(this.EmpLastNameBox);
             this.ManageEmployees.Controls.Add(this.EmpLastName);
+            this.ManageEmployees.Controls.Add(this.changeUserTypeEmp);
             this.ManageEmployees.Controls.Add(this.employees);
             this.ManageEmployees.Location = new System.Drawing.Point(4, 40);
             this.ManageEmployees.Name = "ManageEmployees";
@@ -930,6 +1145,7 @@ namespace CMPT_291_Project
             this.dropDown.Name = "dropDown";
             this.dropDown.Size = new System.Drawing.Size(238, 28);
             this.dropDown.TabIndex = 248;
+            this.dropDown.SelectedIndexChanged += new System.EventHandler(this.dropDown_SelectedIndexChanged);
             // 
             // employeeListLabel
             // 
@@ -1131,10 +1347,10 @@ namespace CMPT_291_Project
             this.SIN.Name = "SIN";
             this.SIN.Size = new System.Drawing.Size(44, 20);
             this.SIN.TabIndex = 208;
-            this.SIN.Text = "SIN:";
+            this.SIN.Text = "SSN:";
             this.SIN.Visible = false;
             // 
-            // label17
+            // zipLabel
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
@@ -1145,7 +1361,7 @@ namespace CMPT_291_Project
             this.label17.Text = "Zip Code:";
             this.label17.Visible = false;
             // 
-            // label18
+            // stateLabel
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
@@ -1156,7 +1372,7 @@ namespace CMPT_291_Project
             this.label18.Text = "State:";
             this.label18.Visible = false;
             // 
-            // label19
+            // cityLabel
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
@@ -1167,7 +1383,7 @@ namespace CMPT_291_Project
             this.label19.Text = "City:";
             this.label19.Visible = false;
             // 
-            // label20
+            // rateLabel
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
@@ -1178,7 +1394,7 @@ namespace CMPT_291_Project
             this.label20.Text = "Hourly Rate:";
             this.label20.Visible = false;
             // 
-            // label21
+            // addressLabel
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
@@ -1189,7 +1405,7 @@ namespace CMPT_291_Project
             this.label21.Text = "Address:";
             this.label21.Visible = false;
             // 
-            // label22
+            // dateLabel
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
@@ -1200,7 +1416,7 @@ namespace CMPT_291_Project
             this.label22.Text = "Start Date:";
             this.label22.Visible = false;
             // 
-            // label23
+            // phoneLabel
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
@@ -1211,7 +1427,7 @@ namespace CMPT_291_Project
             this.label23.Text = "Phone:";
             this.label23.Visible = false;
             // 
-            // label24
+            // ssnLabel
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
@@ -1222,7 +1438,7 @@ namespace CMPT_291_Project
             this.label24.Text = "SIN:";
             this.label24.Visible = false;
             // 
-            // label25
+            // empName
             // 
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(496, 48);
@@ -1949,7 +2165,6 @@ namespace CMPT_291_Project
         private System.Windows.Forms.Label userZipEmp;
         private System.Windows.Forms.Label userStateEmp;
         private System.Windows.Forms.Label userCityEmp;
-        private System.Windows.Forms.Label userEmailEmp;
         private System.Windows.Forms.Label userAddressEmp;
         private System.Windows.Forms.Label userDateEmp;
         private System.Windows.Forms.Label userPlanEmp;
@@ -1959,9 +2174,8 @@ namespace CMPT_291_Project
         private System.Windows.Forms.ProgressBar userActivityEmp;
         private System.Windows.Forms.PictureBox userPicEmp;
         private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.Button selectUserEmp;
         private System.Windows.Forms.Button empBack;
-        private System.Windows.Forms.Label userListLabel1;
+        private System.Windows.Forms.Label userListLabel;
         private System.Windows.Forms.TabPage RentalPage;
         private System.Windows.Forms.Label MoviesToWatch;
         private System.Windows.Forms.ListView RentMovie;
@@ -2011,7 +2225,7 @@ namespace CMPT_291_Project
         private System.Windows.Forms.Button userSettings;
         private System.Windows.Forms.TabPage ManageEmployees;
         private System.Windows.Forms.Label employeeListLabel;
-        private System.Windows.Forms.Button changeUserTypeMang;
+        private System.Windows.Forms.Button changeUserTypeEmp;
         private System.Windows.Forms.TextBox PhoneNoBox;
         private System.Windows.Forms.TextBox HourlyRateBox;
         private System.Windows.Forms.TextBox AddressBox;
@@ -2034,20 +2248,19 @@ namespace CMPT_291_Project
         private System.Windows.Forms.Label StartDate;
         private System.Windows.Forms.Label PhoneNo;
         private System.Windows.Forms.Label SIN;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label zipLabel;
+        private System.Windows.Forms.Label stateLabel;
+        private System.Windows.Forms.Label cityLabel;
+        private System.Windows.Forms.Label rateLabel;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Label dateLabel;
+        private System.Windows.Forms.Label phoneLabel;
+        private System.Windows.Forms.Label ssnLabel;
+        private System.Windows.Forms.Label empName;
         private System.Windows.Forms.Button EmployeeAdd;
         private System.Windows.Forms.PictureBox EmployeePic;
         private System.Windows.Forms.Button CancelAdd;
-        private System.Windows.Forms.Button selsectEmployee;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button empBackButton;
         private System.Windows.Forms.TabPage manageMovies;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader11;
@@ -2060,16 +2273,62 @@ namespace CMPT_291_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNum;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.TextBox userSearchBox;
+        private System.Windows.Forms.Button searchBar;
+        private System.Windows.Forms.ComboBox userDropdown;
+        private System.Windows.Forms.DataGridView userList;
+        private System.Windows.Forms.Label addUserMessage;
+        private System.Windows.Forms.Label addEmpMsg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AcctNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Label addUserMessage;
-        private System.Windows.Forms.Label addEmpMsg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn planType;
+        private System.Windows.Forms.Label userCred;
+        private System.Windows.Forms.Label userPhone;
+        private System.Windows.Forms.Label userZip;
+        private System.Windows.Forms.Label userState;
+        private System.Windows.Forms.Label userCity;
+        private System.Windows.Forms.Label userAddress;
+        private System.Windows.Forms.Label userDate;
+        private System.Windows.Forms.Label userPlan;
+        private System.Windows.Forms.Label userAcctNo;
+        private System.Windows.Forms.Button deleteUser;
+        private System.Windows.Forms.Button editUser;
+        private System.Windows.Forms.TextBox changeLast;
+        private System.Windows.Forms.TextBox changeFirst;
+        private System.Windows.Forms.DateTimePicker changeDate;
+        private System.Windows.Forms.TextBox changeCred;
+        private System.Windows.Forms.TextBox changeZip;
+        private System.Windows.Forms.TextBox changeState;
+        private System.Windows.Forms.TextBox changeCity;
+        private System.Windows.Forms.TextBox changeAddress;
+        private System.Windows.Forms.TextBox changePlan;
+        private System.Windows.Forms.TextBox changePhone;
+        private System.Windows.Forms.Button doneEdit;
+        private System.Windows.Forms.Label editDeleteMsg;
+        private System.Windows.Forms.Label editDeleteEmpMsg;
+        private System.Windows.Forms.TextBox changeEmpSur;
+        private System.Windows.Forms.Button doneEditEmp;
+        private System.Windows.Forms.Button deleteEmp;
+        private System.Windows.Forms.Button editEmp;
+        private System.Windows.Forms.Label empZip;
+        private System.Windows.Forms.Label empState;
+        private System.Windows.Forms.Label empCity;
+        private System.Windows.Forms.Label empAddress;
+        private System.Windows.Forms.Label empRate;
+        private System.Windows.Forms.Label empDate;
+        private System.Windows.Forms.Label empPhone;
+        private System.Windows.Forms.Label empSSN;
+        private System.Windows.Forms.TextBox changeEmpPhone;
+        private System.Windows.Forms.DateTimePicker changeEmpDate;
+        private System.Windows.Forms.TextBox changeEmpRate;
+        private System.Windows.Forms.TextBox changeEmpAddress;
+        private System.Windows.Forms.TextBox changeEmpCity;
+        private System.Windows.Forms.TextBox changeEmpState;
+        private System.Windows.Forms.TextBox changeEmpZip;
+        private System.Windows.Forms.TextBox changeEmpFirst;
+        private System.Windows.Forms.Button button2;
     }
 }
 
