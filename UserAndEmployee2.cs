@@ -27,7 +27,7 @@ namespace CMPT_291_Project
             dropDown.Items.Add("Show All");
             dropDown.Items.Add("Show with SSN: ");
 
-            String connectionString = "Server = PLEASEDONTHACKM; Database = MovieRental; Trusted_Connection = yes;";
+            String connectionString = "Server = AURORA; Database = MovieRental; Trusted_Connection = yes;";
 
 
             /* Starting the connection */
@@ -724,6 +724,11 @@ namespace CMPT_291_Project
 
                 MessageBox.Show(e2.ToString(), "Error");
             }
+        }
+
+        private void ManageUser_Click(object sender, EventArgs e)
+        {
+
         }
         /*
 private void selsectEmployee_Click(object sender, EventArgs e)

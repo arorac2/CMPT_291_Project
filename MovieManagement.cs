@@ -23,7 +23,7 @@ namespace CMPT_291_Project
         public MovieManagement()
         {
             InitializeComponent();
-            string connectionString = "Server = IANPC; Database = MovieRental; Trusted_Connection = yes;";
+            string connectionString = "Server = AURORA; Database = MovieRental; Trusted_Connection = yes;";
 
             TI = new CultureInfo("en-US", false).TextInfo;
             conn = new SqlConnection(connectionString);
@@ -133,12 +133,13 @@ namespace CMPT_291_Project
             {
                try
                {
+                    cmd.Parameters.Clear();
                     SqlParameter[] parameters = new SqlParameter[3];
                     parameters[0] = new SqlParameter("@title", TI.ToTitleCase(addMoviePopup.GetMovieTitle()));
                     cmd.Parameters.Add(parameters[0]);
                     parameters[1] = new SqlParameter("@genre", addMoviePopup.GetMovieGenre());
                     cmd.Parameters.Add(parameters[1]);
-                    parameters[2] = new SqlParameter("@copies", addMoviePopup.GetMovieCopies());
+                    parameters[2] = new SqlParameter("copies", addMoviePopup.GetMovieCopies());
                     cmd.Parameters.Add(parameters[2]);
 
                     cmd.ExecuteNonQuery();
