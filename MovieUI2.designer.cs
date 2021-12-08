@@ -176,9 +176,9 @@ namespace CMPT_291_Project
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(708, 237);
+            this.textBox1.Location = new System.Drawing.Point(719, 177);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
+            this.textBox1.Size = new System.Drawing.Size(110, 20);
             this.textBox1.TabIndex = 12;
             // 
             // MovieUI2

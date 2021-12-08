@@ -222,7 +222,7 @@ namespace CMPT_291_Project
 
             if (selectedRow.Cells[3].Value != null)  //if the id is not null
             {
-                textBox1.Text = selectedRow.Cells[3].Value.ToString();  //then sh
+                //textBox1.Text = selectedRow.Cells[3].Value.ToString();  //then sh
                 myCommand.CommandText = "select * from movies where title = " + selectedRow.Cells[3].Value.ToString(); //where it equals to the movie name?
                 MessageBox.Show(myCommand.CommandText);
 
@@ -234,7 +234,7 @@ namespace CMPT_291_Project
 
                     while (myReader.Read())
                     {
-                        textBox1.Text = myReader["id"].ToString();
+                       // textBox1.Text = myReader["id"].ToString();
                         dataGridView1.Rows.Add(myReader["title"].ToString(), myReader["id"].ToString());
                         MessageBox.Show(myCommand.CommandText);
 
