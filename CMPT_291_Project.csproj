@@ -52,11 +52,18 @@
     <Compile Include="ActorSearch.Designer.cs">
       <DependentUpon>ActorSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddMoviePopup.cs">
+    <Compile Include="AddMoviePopup.cs" />
+    <Compile Include="MoviePopup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddMoviePopup.Designer.cs">
-      <DependentUpon>AddMoviePopup.cs</DependentUpon>
+    <Compile Include="MoviePopup.Designer.cs">
+      <DependentUpon>MoviePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvancedStatistics.Designer.cs">
+      <DependentUpon>AdvancedStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="MovieManagement.cs">
       <SubType>Form</SubType>
@@ -84,17 +91,20 @@
     <Compile Include="UserAndEmployee2.designer.cs">
       <DependentUpon>UserAndEmployee2.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserSettings2.cs">
+    <Compile Include="UserSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserSettings2.designer.cs">
-      <DependentUpon>UserSettings2.cs</DependentUpon>
+    <Compile Include="UserSettings.designer.cs">
+      <DependentUpon>UserSettings.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ActorSearch.resx">
       <DependentUpon>ActorSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddMoviePopup.resx">
-      <DependentUpon>AddMoviePopup.cs</DependentUpon>
+    <EmbeddedResource Include="MoviePopup.resx">
+      <DependentUpon>MoviePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedStatistics.resx">
+      <DependentUpon>AdvancedStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieManagement.resx">
       <DependentUpon>MovieManagement.cs</DependentUpon>
@@ -117,8 +127,8 @@
     <EmbeddedResource Include="UserAndEmployee2.resx">
       <DependentUpon>UserAndEmployee2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserSettings2.resx">
-      <DependentUpon>UserSettings2.cs</DependentUpon>
+    <EmbeddedResource Include="UserSettings.resx">
+      <DependentUpon>UserSettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

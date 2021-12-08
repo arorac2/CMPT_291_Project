@@ -1,7 +1,7 @@
 ﻿
 namespace CMPT_291_Project
 {
-    partial class AddMoviePopup
+    partial class MoviePopup
     {
         /// <summary>
         /// Required designer variable.

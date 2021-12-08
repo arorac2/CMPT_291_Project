@@ -125,7 +125,7 @@ namespace CMPT_291_Project
 
         private void addMovieBtn_Click(object sender, EventArgs e)
         {
-            AddMoviePopup addMoviePopup = new AddMoviePopup(this);
+            MoviePopup addMoviePopup = new MoviePopup();
             DialogResult result = addMoviePopup.ShowDialog();
 
             cmd.CommandText = "INSERT INTO movies(title, genre, copies_in_stock) VALUES(@title, @genre, @copies)";
